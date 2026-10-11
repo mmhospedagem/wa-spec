@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1049946321
+// WhatsApp Version: 2.3000.1049986944
 
 export interface WaMexPersistId {
     readonly docId: string
@@ -320,7 +320,7 @@ export declare const WA_MEX_OPERATION_SCHEMAS: {
     readonly DebugLabyrinthFetchVirtualDeviceInfo: WaMexOperationSchema<'query', readonly ['input']>
     readonly DebugLabyrinthInboxSnapshot: WaMexOperationSchema<'query', readonly ['clientSealToken', 'deviceId', 'locallyAvailableEpochIds', 'messageFirst', 'threadFirst']>
     readonly DebugLabyrinthRange: WaMexOperationSchema<'query', readonly ['device_id', 'message_count', 'partial_thread_id']>
-    readonly DebugLabyrinthRestorePage: WaMexOperationSchema<'query', readonly ['after', 'device_id', 'message_count', 'partial_thread_id']>
+    readonly DebugLabyrinthRestorePage: WaMexOperationSchema<'query', readonly ['after', 'device_id', 'locally_available_epoch_ids', 'message_count', 'partial_thread_id']>
     readonly DeleteNewsletter: WaMexOperationSchema<'mutation', readonly ['newsletter_id']>
     readonly DemoteNewsletterAdmin: WaMexOperationSchema<'mutation', readonly ['newsletter_id', 'user_id']>
     readonly E2EEMetadataMailboxAddGroupParticipants: WaMexOperationSchema<'mutation', readonly ['input']>
@@ -865,6 +865,7 @@ export type WaMexDebugLabyrinthRangeVariables = {
 export type WaMexDebugLabyrinthRestorePageVariables = {
     readonly after?: string
     readonly device_id?: string
+    readonly locally_available_epoch_ids?: ReadonlyArray<string>
     readonly message_count?: number
     readonly partial_thread_id?: string
 }
@@ -3339,11 +3340,42 @@ export type WaMexDebugLabyrinthInboxSnapshotResponse = {
                             readonly __typename?: string
                             readonly encrypted_payload?: unknown
                             readonly encryption_version?: number
+                            readonly epoch_anon_id?: string
                             readonly id?: string
+                        }
+                    }>
+                    readonly epoch_derivation_set?: ReadonlyArray<{
+                        readonly backward_edge?: unknown
+                        readonly forward_edge?: {
+                            readonly auth_public_key?: string
+                            readonly encrypted_entropy?: unknown
+                        }
+                        readonly from_epoch?: {
+                            readonly epoch_anon_id?: string
+                            readonly epoch_id?: string
+                        }
+                        readonly to_epoch?: {
+                            readonly epoch_anon_id?: string
+                            readonly epoch_id?: string
                         }
                     }>
                 }
                 readonly thread_id_seal?: {
+                    readonly epoch_derivation_set?: ReadonlyArray<{
+                        readonly backward_edge?: unknown
+                        readonly forward_edge?: {
+                            readonly auth_public_key?: string
+                            readonly encrypted_entropy?: unknown
+                        }
+                        readonly from_epoch?: {
+                            readonly epoch_anon_id?: string
+                            readonly epoch_id?: string
+                        }
+                        readonly to_epoch?: {
+                            readonly epoch_anon_id?: string
+                            readonly epoch_id?: string
+                        }
+                    }>
                     readonly sealed_thread_id?: string
                 }
             }>
@@ -3387,8 +3419,24 @@ export type WaMexDebugLabyrinthRestorePageResponse = {
                     readonly __typename?: string
                     readonly encrypted_payload?: unknown
                     readonly encryption_version?: number
+                    readonly epoch_anon_id?: string
                     readonly id?: string
                     readonly timestamp_ms?: number
+                }
+            }>
+            readonly epoch_derivation_set?: ReadonlyArray<{
+                readonly backward_edge?: unknown
+                readonly forward_edge?: {
+                    readonly auth_public_key?: string
+                    readonly encrypted_entropy?: unknown
+                }
+                readonly from_epoch?: {
+                    readonly epoch_anon_id?: string
+                    readonly epoch_id?: string
+                }
+                readonly to_epoch?: {
+                    readonly epoch_anon_id?: string
+                    readonly epoch_id?: string
                 }
             }>
             readonly page_info?: {

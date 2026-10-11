@@ -2093,7 +2093,7 @@
       }
     },
     "DebugLabyrinthInboxSnapshot": {
-      "docId": "29079538964986699",
+      "docId": "28613840811611376",
       "operationKind": "query",
       "originalName": "WAWebDebugLabyrinthInboxSnapshotQuery",
       "response": {
@@ -2115,12 +2115,47 @@
                         "__typename": "string",
                         "encrypted_payload": "unknown",
                         "encryption_version": "number",
+                        "epoch_anon_id": "string",
                         "id": "string"
+                      }
+                    }
+                  ],
+                  "epoch_derivation_set": [
+                    {
+                      "backward_edge": "unknown",
+                      "forward_edge": {
+                        "auth_public_key": "string",
+                        "encrypted_entropy": "unknown"
+                      },
+                      "from_epoch": {
+                        "epoch_anon_id": "string",
+                        "epoch_id": "string"
+                      },
+                      "to_epoch": {
+                        "epoch_anon_id": "string",
+                        "epoch_id": "string"
                       }
                     }
                   ]
                 },
                 "thread_id_seal": {
+                  "epoch_derivation_set": [
+                    {
+                      "backward_edge": "unknown",
+                      "forward_edge": {
+                        "auth_public_key": "string",
+                        "encrypted_entropy": "unknown"
+                      },
+                      "from_epoch": {
+                        "epoch_anon_id": "string",
+                        "epoch_id": "string"
+                      },
+                      "to_epoch": {
+                        "epoch_anon_id": "string",
+                        "epoch_id": "string"
+                      }
+                    }
+                  ],
                   "sealed_thread_id": "string"
                 }
               }
@@ -2186,7 +2221,7 @@
       }
     },
     "DebugLabyrinthRestorePage": {
-      "docId": "27748541024820945",
+      "docId": "39786997137557871",
       "operationKind": "query",
       "originalName": "WAWebDebugLabyrinthRestorePageJobQuery",
       "response": {
@@ -2202,8 +2237,26 @@
                   "__typename": "string",
                   "encrypted_payload": "unknown",
                   "encryption_version": "number",
+                  "epoch_anon_id": "string",
                   "id": "string",
                   "timestamp_ms": "number"
+                }
+              }
+            ],
+            "epoch_derivation_set": [
+              {
+                "backward_edge": "unknown",
+                "forward_edge": {
+                  "auth_public_key": "string",
+                  "encrypted_entropy": "unknown"
+                },
+                "from_epoch": {
+                  "epoch_anon_id": "string",
+                  "epoch_id": "string"
+                },
+                "to_epoch": {
+                  "epoch_anon_id": "string",
+                  "epoch_id": "string"
                 }
               }
             ],
@@ -2217,12 +2270,16 @@
       "variables": [
         "after",
         "device_id",
+        "locally_available_epoch_ids",
         "message_count",
         "partial_thread_id"
       ],
       "variablesShape": {
         "after": "string",
         "device_id": "string",
+        "locally_available_epoch_ids": [
+          "string"
+        ],
         "message_count": "number",
         "partial_thread_id": "string"
       }
@@ -9082,5 +9139,5 @@
       }
     }
   },
-  "waVersion": "2.3000.1049946321"
+  "waVersion": "2.3000.1049986944"
 }

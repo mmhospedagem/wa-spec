@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1049946321
+// WhatsApp Version: 2.3000.1049986944
 'use strict'
 
 const WA_MEX_PERSIST_IDS = Object.freeze({
@@ -66,9 +66,9 @@ const WA_MEX_PERSIST_IDS = Object.freeze({
     CustomLabel3pdEvent: Object.freeze({ docId: '24247439618185103', clientDocId: '24247439618185103' }),
     DebugLabyrinthAddDevice: Object.freeze({ docId: '38487370967576807', clientDocId: '38487370967576807' }),
     DebugLabyrinthFetchVirtualDeviceInfo: Object.freeze({ docId: '28519588807706310', clientDocId: '28519588807706310' }),
-    DebugLabyrinthInboxSnapshot: Object.freeze({ docId: '29079538964986699', clientDocId: '29079538964986699' }),
+    DebugLabyrinthInboxSnapshot: Object.freeze({ docId: '28613840811611376', clientDocId: '28613840811611376' }),
     DebugLabyrinthRange: Object.freeze({ docId: '27219778391054922', clientDocId: '27219778391054922' }),
-    DebugLabyrinthRestorePage: Object.freeze({ docId: '27748541024820945', clientDocId: '27748541024820945' }),
+    DebugLabyrinthRestorePage: Object.freeze({ docId: '39786997137557871', clientDocId: '39786997137557871' }),
     DeleteNewsletter: Object.freeze({ docId: '30062808666639665', clientDocId: '30062808666639665' }),
     DemoteNewsletterAdmin: Object.freeze({ docId: '9880997548630971', clientDocId: '9880997548630971' }),
     E2EEMetadataMailboxAddGroupParticipants: Object.freeze({ docId: '25006925522305489', clientDocId: '25006925522305489' }),
@@ -308,7 +308,7 @@ const WA_MEX_OPERATION_SCHEMAS = Object.freeze({
     DebugLabyrinthFetchVirtualDeviceInfo: Object.freeze({ operationKind: 'query', variables: Object.freeze(['input']) }),
     DebugLabyrinthInboxSnapshot: Object.freeze({ operationKind: 'query', variables: Object.freeze(['clientSealToken', 'deviceId', 'locallyAvailableEpochIds', 'messageFirst', 'threadFirst']) }),
     DebugLabyrinthRange: Object.freeze({ operationKind: 'query', variables: Object.freeze(['device_id', 'message_count', 'partial_thread_id']) }),
-    DebugLabyrinthRestorePage: Object.freeze({ operationKind: 'query', variables: Object.freeze(['after', 'device_id', 'message_count', 'partial_thread_id']) }),
+    DebugLabyrinthRestorePage: Object.freeze({ operationKind: 'query', variables: Object.freeze(['after', 'device_id', 'locally_available_epoch_ids', 'message_count', 'partial_thread_id']) }),
     DeleteNewsletter: Object.freeze({ operationKind: 'mutation', variables: Object.freeze(['newsletter_id']) }),
     DemoteNewsletterAdmin: Object.freeze({ operationKind: 'mutation', variables: Object.freeze(['newsletter_id', 'user_id']) }),
     E2EEMetadataMailboxAddGroupParticipants: Object.freeze({ operationKind: 'mutation', variables: Object.freeze(['input']) }),

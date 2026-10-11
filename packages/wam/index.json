@@ -2234,6 +2234,14 @@
         "VALIDATE_ACCESS_TOKEN": 7
       }
     },
+    "CAPI_PAIR_BUSINESS_CHANNEL_TYPE": {
+      "export": "CAPI_PAIR_BUSINESS_CHANNEL_TYPE",
+      "module": "WAWebWamEnumCapiPairBusinessChannelType",
+      "values": {
+        "CLOUD_API": 1,
+        "COEX": 2
+      }
+    },
     "CATALOG_BIZ_ACTION": {
       "export": "CATALOG_BIZ_ACTION",
       "module": "WAWebWamEnumCatalogBizAction",
@@ -53807,6 +53815,17 @@
           "id": 3,
           "type": "string"
         },
+        "capiPairBusinessChannel": {
+          "enum": "CAPI_PAIR_BUSINESS_CHANNEL_TYPE",
+          "falcoName": "capi_pair_business_channel",
+          "id": 31,
+          "type": "enum"
+        },
+        "capiPairBusinessLid": {
+          "falcoName": "capi_pair_business_lid",
+          "id": 32,
+          "type": "string"
+        },
         "chatsFolderType": {
           "enum": "CHATS_FOLDER_TYPE",
           "falcoName": "chats_folder_type",
@@ -70897,7 +70916,7 @@
       "label": "psIdValue"
     }
   ],
-  "waVersion": "2.3000.1049946321",
+  "waVersion": "2.3000.1049986944",
   "wireFormat": {
     "markers": {
       "event": 1,

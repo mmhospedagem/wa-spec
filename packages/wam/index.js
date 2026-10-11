@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1049946321
+// WhatsApp Version: 2.3000.1049986944
 'use strict'
 
 const WA_WAM_PROTOCOL_VERSION = 5
@@ -2286,6 +2286,14 @@ const WA_WAM_ENUMS = Object.freeze({
         'RECEIVED_COMPANION_NONCE_FROM_PRIMARY': 4,
         'REQUEST_NONCE_FROM_PRIMARY': 1,
         'VALIDATE_ACCESS_TOKEN': 7
+        })
+    }),
+    CAPI_PAIR_BUSINESS_CHANNEL_TYPE: Object.freeze({
+        module: 'WAWebWamEnumCapiPairBusinessChannelType',
+        export: 'CAPI_PAIR_BUSINESS_CHANNEL_TYPE',
+        values: Object.freeze({
+        'CLOUD_API': 1,
+        'COEX': 2
         })
     }),
     CATALOG_BIZ_ACTION: Object.freeze({
@@ -26811,6 +26819,8 @@ const WA_WAM_EVENTS = Object.freeze({
             bodyUrlCountInt: Object.freeze({ id: 1, type: 'integer', falcoName: 'body_url_count_int' }),
             bodyUrlUniqueCountInt: Object.freeze({ id: 2, type: 'integer', falcoName: 'body_url_unique_count_int' }),
             buttonValueJsonArray: Object.freeze({ id: 3, type: 'string', falcoName: 'button_value_json_array' }),
+            capiPairBusinessChannel: Object.freeze({ id: 31, type: 'enum', enum: 'CAPI_PAIR_BUSINESS_CHANNEL_TYPE', falcoName: 'capi_pair_business_channel' }),
+            capiPairBusinessLid: Object.freeze({ id: 32, type: 'string', falcoName: 'capi_pair_business_lid' }),
             chatsFolderType: Object.freeze({ id: 4, type: 'enum', enum: 'CHATS_FOLDER_TYPE', falcoName: 'chats_folder_type' }),
             contactType: Object.freeze({ id: 5, type: 'enum', enum: 'CONTACT_TYPE', falcoName: 'contact_type' }),
             ctaUrlUniqueCountInt: Object.freeze({ id: 6, type: 'integer', falcoName: 'cta_url_unique_count_int' }),
