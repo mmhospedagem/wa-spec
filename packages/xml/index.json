@@ -23985,7 +23985,7 @@
               {
                 "attrs": {
                   "appdata": {
-                    "arg": "I",
+                    "arg": "D",
                     "direction": "both",
                     "enumValues": [
                       "default",
@@ -23996,19 +23996,19 @@
                     "type": "enum"
                   },
                   "conversation_thread_id": {
-                    "arg": "v",
+                    "arg": "R",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
                   },
                   "destination_id": {
-                    "arg": "E",
+                    "arg": "I",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
                   },
                   "event_type": {
-                    "arg": "b",
+                    "arg": "S",
                     "direction": "out",
                     "enumValues": [
                       "creation",
@@ -24029,7 +24029,7 @@
                     "value": "true"
                   },
                   "message_association_type": {
-                    "arg": "C",
+                    "arg": "v",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
@@ -24040,7 +24040,7 @@
                     "value": "smb_mm"
                   },
                   "origin": {
-                    "arg": "k",
+                    "arg": "T",
                     "direction": "out",
                     "enumValues": [
                       "ctwa"
@@ -24060,7 +24060,7 @@
                     "type": "string"
                   },
                   "polltype": {
-                    "arg": "y",
+                    "arg": "b",
                     "direction": "out",
                     "enumValues": [
                       "creation",
@@ -24095,8 +24095,9 @@
                     "value": "status"
                   },
                   "st": {
-                    "arg": "t",
+                    "arg": "String(P.scheduledTimestampS)",
                     "direction": "both",
+                    "optional": true,
                     "type": "string"
                   },
                   "status_setting": {
@@ -24106,19 +24107,19 @@
                     "type": "string"
                   },
                   "tag_reason": {
-                    "arg": "T",
+                    "arg": "x",
                     "direction": "out",
                     "optional": true,
                     "type": "string"
                   },
                   "thread_msg_id": {
-                    "arg": "S.threadMsgId",
+                    "arg": "L.threadMsgId",
                     "direction": "out",
                     "optional": true,
                     "type": "string"
                   },
                   "thread_msg_sender_jid": {
-                    "arg": "S.threadMsgSenderLid",
+                    "arg": "L.threadMsgSenderLid",
                     "direction": "out",
                     "optional": true,
                     "type": "userJid"
@@ -24126,6 +24127,7 @@
                   "type": {
                     "arg": "o(\"WAWebScheduledMsgConstants\").SCHEDULED_MSG_META_TYPE",
                     "direction": "both",
+                    "optional": true,
                     "type": "literal",
                     "value": "scheduled_message"
                   },
@@ -48214,7 +48216,19 @@
                 "optional": true,
                 "type": "jid"
               },
+              "is_call_ended": {
+                "optional": true,
+                "type": "bool"
+              },
               "notify": {
+                "optional": true,
+                "type": "string"
+              },
+              "reason": {
+                "optional": true,
+                "type": "string"
+              },
+              "terminate_reason": {
                 "optional": true,
                 "type": "string"
               },
@@ -48277,6 +48291,23 @@
                 "max": 1,
                 "min": 0,
                 "tag": "silence"
+              },
+              {
+                "attrs": {
+                  "terminate_reason": {
+                    "optional": true,
+                    "type": "string"
+                  },
+                  "terminate_transaction_id": {
+                    "optional": true,
+                    "type": "string"
+                  }
+                },
+                "children": [],
+                "content": null,
+                "max": 1,
+                "min": 0,
+                "tag": "terminate_hint"
               },
               {
                 "attrs": {},
@@ -50045,7 +50076,7 @@
               {
                 "attrs": {
                   "appdata": {
-                    "arg": "I",
+                    "arg": "D",
                     "direction": "both",
                     "enumValues": [
                       "default",
@@ -50056,19 +50087,19 @@
                     "type": "enum"
                   },
                   "conversation_thread_id": {
-                    "arg": "v",
+                    "arg": "R",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
                   },
                   "destination_id": {
-                    "arg": "E",
+                    "arg": "I",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
                   },
                   "event_type": {
-                    "arg": "b",
+                    "arg": "S",
                     "direction": "out",
                     "enumValues": [
                       "creation",
@@ -50089,7 +50120,7 @@
                     "value": "true"
                   },
                   "message_association_type": {
-                    "arg": "C",
+                    "arg": "v",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
@@ -50100,7 +50131,7 @@
                     "value": "smb_mm"
                   },
                   "origin": {
-                    "arg": "k",
+                    "arg": "T",
                     "direction": "out",
                     "enumValues": [
                       "ctwa"
@@ -50120,7 +50151,7 @@
                     "type": "string"
                   },
                   "polltype": {
-                    "arg": "y",
+                    "arg": "b",
                     "direction": "out",
                     "enumValues": [
                       "creation",
@@ -50155,8 +50186,9 @@
                     "value": "status"
                   },
                   "st": {
-                    "arg": "t",
+                    "arg": "String(P.scheduledTimestampS)",
                     "direction": "both",
+                    "optional": true,
                     "type": "string"
                   },
                   "status_setting": {
@@ -50166,19 +50198,19 @@
                     "type": "string"
                   },
                   "tag_reason": {
-                    "arg": "T",
+                    "arg": "x",
                     "direction": "out",
                     "optional": true,
                     "type": "string"
                   },
                   "thread_msg_id": {
-                    "arg": "S.threadMsgId",
+                    "arg": "L.threadMsgId",
                     "direction": "out",
                     "optional": true,
                     "type": "string"
                   },
                   "thread_msg_sender_jid": {
-                    "arg": "S.threadMsgSenderLid",
+                    "arg": "L.threadMsgSenderLid",
                     "direction": "out",
                     "optional": true,
                     "type": "userJid"
@@ -50186,6 +50218,7 @@
                   "type": {
                     "arg": "o(\"WAWebScheduledMsgConstants\").SCHEDULED_MSG_META_TYPE",
                     "direction": "both",
+                    "optional": true,
                     "type": "literal",
                     "value": "scheduled_message"
                   },
@@ -51393,13 +51426,13 @@
                     "type": "string"
                   },
                   "conversation_thread_id": {
-                    "arg": "v",
+                    "arg": "R",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
                   },
                   "destination_id": {
-                    "arg": "E",
+                    "arg": "I",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
@@ -51433,7 +51466,7 @@
                     "value": "true"
                   },
                   "message_association_type": {
-                    "arg": "C",
+                    "arg": "v",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
@@ -51520,7 +51553,7 @@
                     "type": "string"
                   },
                   "tag_reason": {
-                    "arg": "T",
+                    "arg": "x",
                     "direction": "out",
                     "optional": true,
                     "type": "string"
@@ -57579,5 +57612,5 @@
       "tag": "xmlstreamend"
     }
   },
-  "waVersion": "2.3000.1049986944"
+  "waVersion": "2.3000.1050031415"
 }

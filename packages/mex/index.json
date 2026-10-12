@@ -2237,7 +2237,7 @@
                   "__typename": "string",
                   "encrypted_payload": "unknown",
                   "encryption_version": "number",
-                  "epoch_anon_id": "string",
+                  "epoch_anon_id": "number",
                   "id": "string",
                   "timestamp_ms": "number"
                 }
@@ -2251,11 +2251,11 @@
                   "encrypted_entropy": "unknown"
                 },
                 "from_epoch": {
-                  "epoch_anon_id": "string",
+                  "epoch_anon_id": "number",
                   "epoch_id": "string"
                 },
                 "to_epoch": {
-                  "epoch_anon_id": "string",
+                  "epoch_anon_id": "number",
                   "epoch_id": "string"
                 }
               }
@@ -7923,7 +7923,7 @@
           "message": "string",
           "results": [
             {
-              "error": "string",
+              "error": "boolean",
               "offline_threading_id": "string",
               "success": "boolean"
             }
@@ -9139,5 +9139,5 @@
       }
     }
   },
-  "waVersion": "2.3000.1049986944"
+  "waVersion": "2.3000.1050031415"
 }

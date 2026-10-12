@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1049986944
+// WhatsApp Version: 2.3000.1050031415
 
 export interface WaXmlOperationSummary {
     readonly module: string
@@ -8703,12 +8703,12 @@ export interface WaXmlOperations {
                         readonly receiver_account_kind: string
                         readonly sender_intent?: 'hosted'
                         readonly session_scope?: 'status'
-                        readonly st: string
+                        readonly st?: string
                         readonly status_setting?: string
                         readonly tag_reason?: string
                         readonly thread_msg_id?: string
                         readonly thread_msg_sender_jid?: string
-                        readonly type: 'scheduled_message'
+                        readonly type?: 'scheduled_message'
                         readonly view_once?: 'true'
                     }
                     readonly children: {
@@ -17538,7 +17538,10 @@ export interface WaXmlStanzas {
                         readonly caller_country_code?: string
                         readonly caller_pn?: string
                         readonly 'group-jid'?: string
+                        readonly is_call_ended?: boolean
                         readonly notify?: string
+                        readonly reason?: string
+                        readonly terminate_reason?: string
                         readonly username?: string
                     }
                     readonly children: {
@@ -17562,6 +17565,13 @@ export interface WaXmlStanzas {
                             readonly tag: 'silence'
                             readonly attrs: {
                                 readonly reason?: string
+                            }
+                        } | undefined
+                        readonly terminate_hint: {
+                            readonly tag: 'terminate_hint'
+                            readonly attrs: {
+                                readonly terminate_reason?: string
+                                readonly terminate_transaction_id?: string
                             }
                         } | undefined
                         readonly video: {
@@ -18090,12 +18100,12 @@ export interface WaXmlStanzas {
                             readonly receiver_account_kind: string
                             readonly sender_intent?: 'hosted'
                             readonly session_scope?: 'status'
-                            readonly st: string
+                            readonly st?: string
                             readonly status_setting?: string
                             readonly tag_reason?: string
                             readonly thread_msg_id?: string
                             readonly thread_msg_sender_jid?: string
-                            readonly type: 'scheduled_message'
+                            readonly type?: 'scheduled_message'
                             readonly view_once?: 'true'
                         }
                         readonly children: {

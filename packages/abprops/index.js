@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1049986944
+// WhatsApp Version: 2.3000.1050031415
 'use strict'
 
 // Every server-driven experiment config WA Web knows about, keyed by the name

@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1049986944
+// WhatsApp Version: 2.3000.1050031415
 
 export interface WaMexPersistId {
     readonly docId: string
@@ -3419,7 +3419,7 @@ export type WaMexDebugLabyrinthRestorePageResponse = {
                     readonly __typename?: string
                     readonly encrypted_payload?: unknown
                     readonly encryption_version?: number
-                    readonly epoch_anon_id?: string
+                    readonly epoch_anon_id?: number
                     readonly id?: string
                     readonly timestamp_ms?: number
                 }
@@ -3431,11 +3431,11 @@ export type WaMexDebugLabyrinthRestorePageResponse = {
                     readonly encrypted_entropy?: unknown
                 }
                 readonly from_epoch?: {
-                    readonly epoch_anon_id?: string
+                    readonly epoch_anon_id?: number
                     readonly epoch_id?: string
                 }
                 readonly to_epoch?: {
-                    readonly epoch_anon_id?: string
+                    readonly epoch_anon_id?: number
                     readonly epoch_id?: string
                 }
             }>
@@ -6765,7 +6765,7 @@ export type WaMexUploadLabyrinthMessagesResponse = {
         readonly __typename?: string
         readonly message?: string
         readonly results?: ReadonlyArray<{
-            readonly error?: string
+            readonly error?: boolean
             readonly offline_threading_id?: string
             readonly success?: boolean
         }>
