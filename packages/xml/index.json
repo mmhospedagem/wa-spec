@@ -23309,7 +23309,7 @@
             ],
             "attrs": {
               "addressing_mode": {
-                "arg": "te",
+                "arg": "re",
                 "direction": "both",
                 "enumValues": [
                   "lid",
@@ -23477,7 +23477,7 @@
                 "type": "userJid"
               },
               "recipient_pn": {
-                "arg": "ue",
+                "arg": "ce",
                 "direction": "both",
                 "optional": true,
                 "type": "userJid"
@@ -24023,6 +24023,12 @@
                     "direction": "out",
                     "type": "groupJid"
                   },
+                  "is_group_status": {
+                    "direction": "out",
+                    "optional": true,
+                    "type": "literal",
+                    "value": "true"
+                  },
                   "is_status_mention": {
                     "direction": "out",
                     "type": "literal",
@@ -24089,13 +24095,13 @@
                     "value": "hosted"
                   },
                   "session_scope": {
-                    "direction": "out",
+                    "direction": "both",
                     "optional": true,
                     "type": "literal",
                     "value": "status"
                   },
                   "st": {
-                    "arg": "String(P.scheduledTimestampS)",
+                    "arg": "String(M.scheduledTimestampS)",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
@@ -49400,7 +49406,7 @@
             ],
             "attrs": {
               "addressing_mode": {
-                "arg": "te",
+                "arg": "re",
                 "direction": "both",
                 "enumValues": [
                   "lid",
@@ -49568,7 +49574,7 @@
                 "type": "userJid"
               },
               "recipient_pn": {
-                "arg": "ue",
+                "arg": "ce",
                 "direction": "both",
                 "optional": true,
                 "type": "userJid"
@@ -50114,6 +50120,12 @@
                     "direction": "out",
                     "type": "groupJid"
                   },
+                  "is_group_status": {
+                    "direction": "out",
+                    "optional": true,
+                    "type": "literal",
+                    "value": "true"
+                  },
                   "is_status_mention": {
                     "direction": "out",
                     "type": "literal",
@@ -50180,13 +50192,13 @@
                     "value": "hosted"
                   },
                   "session_scope": {
-                    "direction": "out",
+                    "direction": "both",
                     "optional": true,
                     "type": "literal",
                     "value": "status"
                   },
                   "st": {
-                    "arg": "String(P.scheduledTimestampS)",
+                    "arg": "String(M.scheduledTimestampS)",
                     "direction": "both",
                     "optional": true,
                     "type": "string"
@@ -50545,7 +50557,7 @@
           "node": {
             "attrs": {
               "addressing_mode": {
-                "arg": "te",
+                "arg": "re",
                 "direction": "both",
                 "enumValues": [
                   "lid",
@@ -50709,7 +50721,7 @@
                 "type": "userJid"
               },
               "recipient_pn": {
-                "arg": "ue",
+                "arg": "ce",
                 "direction": "both",
                 "optional": true,
                 "type": "userJid"
@@ -51457,6 +51469,7 @@
                     "type": "groupJid"
                   },
                   "is_group_status": {
+                    "direction": "both",
                     "optional": true,
                     "type": "bool"
                   },
@@ -56103,7 +56116,7 @@
                 "type": "string"
               },
               "class": {
-                "arg": "p",
+                "arg": "_",
                 "direction": "both",
                 "enumValues": [
                   "call",
@@ -56177,7 +56190,7 @@
                 "type": "time"
               },
               "to": {
-                "arg": "_",
+                "arg": "f",
                 "direction": "both",
                 "type": "jid"
               },
@@ -56404,7 +56417,7 @@
                 "type": "string"
               },
               "class": {
-                "arg": "p",
+                "arg": "_",
                 "direction": "both",
                 "enumValues": [
                   "call",
@@ -56474,7 +56487,7 @@
                 "type": "int"
               },
               "to": {
-                "arg": "_",
+                "arg": "f",
                 "direction": "both",
                 "type": "jid"
               },
@@ -56587,7 +56600,7 @@
                 "type": "string"
               },
               "class": {
-                "arg": "p",
+                "arg": "_",
                 "direction": "both",
                 "enumValues": [
                   "call",
@@ -56669,7 +56682,7 @@
                 "type": "time"
               },
               "to": {
-                "arg": "_",
+                "arg": "f",
                 "direction": "both",
                 "type": "jid"
               },
@@ -56854,7 +56867,7 @@
                 "type": "string"
               },
               "class": {
-                "arg": "p",
+                "arg": "_",
                 "direction": "both",
                 "enumValues": [
                   "call",
@@ -56928,7 +56941,7 @@
                 "type": "time"
               },
               "to": {
-                "arg": "_",
+                "arg": "f",
                 "direction": "both",
                 "type": "jid"
               },
@@ -57612,5 +57625,5 @@
       "tag": "xmlstreamend"
     }
   },
-  "waVersion": "2.3000.1050031415"
+  "waVersion": "2.3000.1050169898"
 }

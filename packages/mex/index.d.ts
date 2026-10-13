@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1050031415
+// WhatsApp Version: 2.3000.1050169898
 
 export interface WaMexPersistId {
     readonly docId: string
@@ -93,7 +93,6 @@ export declare const WA_MEX_PERSIST_IDS: {
     readonly E2EEMetadataMailboxSetGroupSubject: WaMexPersistId
     readonly EBMessageMetadataQuery: WaMexPersistId
     readonly EBMessageRangeQueryForThreads: WaMexPersistId
-    readonly EBRegisterMinosMessageEncryptionKey: WaMexPersistId
     readonly EditBizProfile: WaMexPersistId
     readonly EmailInviteSendGroup: WaMexPersistId
     readonly ExternalCtxAuthoriseWAChat: WaMexPersistId
@@ -183,7 +182,6 @@ export declare const WA_MEX_PERSIST_IDS: {
     readonly OrgAdminGraphQLAddChannel: WaMexPersistId
     readonly OrgAdminGraphQLAddGroup: WaMexPersistId
     readonly OrgAdminGraphQLAdminRoster: WaMexPersistId
-    readonly OrgAdminGraphQLAppendAdminRoster: WaMexPersistId
     readonly OrgAdminGraphQLDirectoryPage: WaMexPersistId
     readonly OrgAdminGraphQLGroup: WaMexPersistId
     readonly OrgAdminGraphQLInviteMembers: WaMexPersistId
@@ -333,7 +331,6 @@ export declare const WA_MEX_OPERATION_SCHEMAS: {
     readonly E2EEMetadataMailboxSetGroupSubject: WaMexOperationSchema<'mutation', readonly ['input']>
     readonly EBMessageMetadataQuery: WaMexOperationSchema<'query', readonly ['data']>
     readonly EBMessageRangeQueryForThreads: WaMexOperationSchema<'query', readonly ['app_id', 'includeAttachmentData', 'restore_payload_strings', 'restore_type']>
-    readonly EBRegisterMinosMessageEncryptionKey: WaMexOperationSchema<'mutation', readonly ['input']>
     readonly EditBizProfile: WaMexOperationSchema<'mutation', readonly ['input', 'lid']>
     readonly EmailInviteSendGroup: WaMexOperationSchema<'mutation', readonly ['input']>
     readonly ExternalCtxAuthoriseWAChat: WaMexOperationSchema<'mutation', readonly ['input']>
@@ -423,7 +420,6 @@ export declare const WA_MEX_OPERATION_SCHEMAS: {
     readonly OrgAdminGraphQLAddChannel: WaMexOperationSchema<'mutation', readonly ['channelID', 'orgID']>
     readonly OrgAdminGraphQLAddGroup: WaMexOperationSchema<'mutation', readonly ['gid', 'orgID']>
     readonly OrgAdminGraphQLAdminRoster: WaMexOperationSchema<'query', readonly ['orgID']>
-    readonly OrgAdminGraphQLAppendAdminRoster: WaMexOperationSchema<'mutation', readonly ['input']>
     readonly OrgAdminGraphQLDirectoryPage: WaMexOperationSchema<'query', readonly ['first', 'orgID']>
     readonly OrgAdminGraphQLGroup: WaMexOperationSchema<'query', readonly ['gid', 'orgID']>
     readonly OrgAdminGraphQLInviteMembers: WaMexOperationSchema<'mutation', readonly ['emails', 'orgID']>
@@ -920,10 +916,6 @@ export type WaMexEBMessageRangeQueryForThreadsVariables = {
     readonly includeAttachmentData?: boolean
     readonly restore_payload_strings?: unknown
     readonly restore_type?: 'INITIAL_RESTORE' | 'RANGE_QUERY_RESTORE'
-}
-
-export type WaMexEBRegisterMinosMessageEncryptionKeyVariables = {
-    readonly input?: Readonly<Record<string, unknown>>
 }
 
 export type WaMexEditBizProfileVariables = {
@@ -1478,13 +1470,6 @@ export type WaMexOrgAdminGraphQLAdminRosterVariables = {
     readonly orgID?: string
 }
 
-export type WaMexOrgAdminGraphQLAppendAdminRosterVariables = {
-    readonly input?: {
-        readonly entries?: unknown
-        readonly org_id?: string
-    }
-}
-
 export type WaMexOrgAdminGraphQLDirectoryPageVariables = {
     readonly first?: number
     readonly orgID?: string
@@ -1998,7 +1983,6 @@ export interface WaMexOperationVariables {
     readonly E2EEMetadataMailboxSetGroupSubject: WaMexE2EEMetadataMailboxSetGroupSubjectVariables
     readonly EBMessageMetadataQuery: WaMexEBMessageMetadataQueryVariables
     readonly EBMessageRangeQueryForThreads: WaMexEBMessageRangeQueryForThreadsVariables
-    readonly EBRegisterMinosMessageEncryptionKey: WaMexEBRegisterMinosMessageEncryptionKeyVariables
     readonly EditBizProfile: WaMexEditBizProfileVariables
     readonly EmailInviteSendGroup: WaMexEmailInviteSendGroupVariables
     readonly ExternalCtxAuthoriseWAChat: WaMexExternalCtxAuthoriseWAChatVariables
@@ -2088,7 +2072,6 @@ export interface WaMexOperationVariables {
     readonly OrgAdminGraphQLAddChannel: WaMexOrgAdminGraphQLAddChannelVariables
     readonly OrgAdminGraphQLAddGroup: WaMexOrgAdminGraphQLAddGroupVariables
     readonly OrgAdminGraphQLAdminRoster: WaMexOrgAdminGraphQLAdminRosterVariables
-    readonly OrgAdminGraphQLAppendAdminRoster: WaMexOrgAdminGraphQLAppendAdminRosterVariables
     readonly OrgAdminGraphQLDirectoryPage: WaMexOrgAdminGraphQLDirectoryPageVariables
     readonly OrgAdminGraphQLGroup: WaMexOrgAdminGraphQLGroupVariables
     readonly OrgAdminGraphQLInviteMembers: WaMexOrgAdminGraphQLInviteMembersVariables
@@ -3116,6 +3099,7 @@ export type WaMexContactManagerCustomerProfileUpsertResponse = {
         readonly profiles?: ReadonlyArray<{
             readonly lid?: string
         }>
+        readonly unresolved_lids?: ReadonlyArray<string>
     }
 }
 
@@ -3680,8 +3664,6 @@ export type WaMexEBMessageRangeQueryForThreadsResponse = {
                                 readonly mandrake_keys?: {
                                     readonly encrypted_mek?: unknown
                                     readonly mek_encryption_version?: number
-                                    readonly recipient_encrypted_mmk?: unknown
-                                    readonly recipient_encrypted_mmk_mailbox_head_hash?: string
                                     readonly recipient_mailbox_head_hash?: string
                                     readonly recipient_membership_proof?: string
                                     readonly recipient_membership_proof_leaf_index?: number
@@ -3729,15 +3711,6 @@ export type WaMexEBMessageRangeQueryForThreadsResponse = {
                 }>
             }
         }
-    }
-}
-
-export type WaMexEBRegisterMinosMessageEncryptionKeyResponse = {
-    readonly xfb_minos_register_message_encryption_key?: {
-        readonly __typename?: string
-        readonly code?: string
-        readonly mek_fbid?: string
-        readonly message?: string
     }
 }
 
@@ -5753,17 +5726,6 @@ export type WaMexOrgAdminGraphQLAdminRosterResponse = {
     }
 }
 
-export type WaMexOrgAdminGraphQLAppendAdminRosterResponse = {
-    readonly xwa_org_admin_roster_append?: {
-        readonly added_count?: number
-        readonly deduplicated_count?: number
-        readonly error_reason?: 'INVALID_EMAIL_BATCH'
-        readonly invalid_row_number?: number
-        readonly status?: 'SUCCESS'
-        readonly total_count?: number
-    }
-}
-
 export type WaMexOrgAdminGraphQLDirectoryPageResponse = {
     readonly xwa_org_get?: {
         readonly error_reason?: string
@@ -5888,14 +5850,22 @@ export type WaMexOrgAdminGraphQLOrgsResponse = {
     readonly xwa_org_list?: {
         readonly orgs?: ReadonlyArray<{
             readonly description?: string
-            readonly icon?: {
+            readonly icon_large?: {
+                readonly uri?: string
+            }
+            readonly icon_small?: {
+                readonly handle?: string
                 readonly uri?: string
             }
             readonly id?: string
             readonly is_member_directory_enabled?: boolean
-            readonly member_count?: number
             readonly member_tag_options?: number
+            readonly members?: {
+                readonly count?: number
+            }
             readonly name?: string
+            readonly org_member_updated_ts_usec?: unknown
+            readonly org_updated_ts_usec?: unknown
             readonly viewer_role?: string
         }>
     }
@@ -5906,7 +5876,9 @@ export type WaMexOrgAdminGraphQLRemoveMemberResponse = {
         readonly error_reason?: string
         readonly org?: {
             readonly id?: string
-            readonly member_count?: number
+            readonly members?: {
+                readonly count?: number
+            }
         }
         readonly status?: 'SUCCESS'
     }
@@ -5915,7 +5887,7 @@ export type WaMexOrgAdminGraphQLRemoveMemberResponse = {
 export type WaMexOrgAdminGraphQLReplaceAdminRosterResponse = {
     readonly xwa_org_admin_roster_replace?: {
         readonly error_reason?: 'INVALID_EMAIL_BATCH'
-        readonly invalid_row_number?: number
+        readonly invalid_row_number?: unknown
         readonly org?: {
             readonly admin_roster?: {
                 readonly entries?: ReadonlyArray<{
@@ -5940,7 +5912,9 @@ export type WaMexOrgAdminGraphQLSetMemberRoleResponse = {
         readonly error_reason?: string
         readonly org?: {
             readonly id?: string
-            readonly member_count?: number
+            readonly members?: {
+                readonly count?: number
+            }
         }
         readonly status?: 'SUCCESS'
     }
@@ -5960,14 +5934,22 @@ export type WaMexOrgAdminGraphQLUpdateOrgResponse = {
         readonly error_reason?: 'INVALID_EMAIL_BATCH'
         readonly org?: {
             readonly description?: string
-            readonly icon?: {
+            readonly icon_large?: {
+                readonly uri?: string
+            }
+            readonly icon_small?: {
+                readonly handle?: string
                 readonly uri?: string
             }
             readonly id?: string
             readonly is_member_directory_enabled?: boolean
-            readonly member_count?: number
             readonly member_tag_options?: number
+            readonly members?: {
+                readonly count?: number
+            }
             readonly name?: string
+            readonly org_member_updated_ts_usec?: unknown
+            readonly org_updated_ts_usec?: unknown
             readonly viewer_role?: string
         }
         readonly status?: 'SUCCESS'
@@ -7700,7 +7682,6 @@ export interface WaMexOperationResponses {
     readonly E2EEMetadataMailboxSetGroupSubject: WaMexE2EEMetadataMailboxSetGroupSubjectResponse
     readonly EBMessageMetadataQuery: WaMexEBMessageMetadataQueryResponse
     readonly EBMessageRangeQueryForThreads: WaMexEBMessageRangeQueryForThreadsResponse
-    readonly EBRegisterMinosMessageEncryptionKey: WaMexEBRegisterMinosMessageEncryptionKeyResponse
     readonly EditBizProfile: WaMexEditBizProfileResponse
     readonly EmailInviteSendGroup: WaMexEmailInviteSendGroupResponse
     readonly ExternalCtxAuthoriseWAChat: WaMexExternalCtxAuthoriseWAChatResponse
@@ -7790,7 +7771,6 @@ export interface WaMexOperationResponses {
     readonly OrgAdminGraphQLAddChannel: WaMexOrgAdminGraphQLAddChannelResponse
     readonly OrgAdminGraphQLAddGroup: WaMexOrgAdminGraphQLAddGroupResponse
     readonly OrgAdminGraphQLAdminRoster: WaMexOrgAdminGraphQLAdminRosterResponse
-    readonly OrgAdminGraphQLAppendAdminRoster: WaMexOrgAdminGraphQLAppendAdminRosterResponse
     readonly OrgAdminGraphQLDirectoryPage: WaMexOrgAdminGraphQLDirectoryPageResponse
     readonly OrgAdminGraphQLGroup: WaMexOrgAdminGraphQLGroupResponse
     readonly OrgAdminGraphQLInviteMembers: WaMexOrgAdminGraphQLInviteMembersResponse

@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1050031415
+// WhatsApp Version: 2.3000.1050169898
 
 export interface WaXmlOperationSummary {
     readonly module: string
@@ -8692,6 +8692,7 @@ export interface WaXmlOperations {
                         readonly destination_id?: string
                         readonly event_type?: 'creation' | 'edit' | 'response'
                         readonly group_invite: string
+                        readonly is_group_status?: 'true'
                         readonly is_status_mention: 'true'
                         readonly message_association_type?: string
                         readonly metering_type: 'smb_mm'
@@ -18089,6 +18090,7 @@ export interface WaXmlStanzas {
                             readonly destination_id?: string
                             readonly event_type?: 'creation' | 'edit' | 'response'
                             readonly group_invite: string
+                            readonly is_group_status?: 'true'
                             readonly is_status_mention: 'true'
                             readonly message_association_type?: string
                             readonly metering_type: 'smb_mm'

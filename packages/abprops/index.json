@@ -116,7 +116,7 @@
       "type": "bool"
     }
   },
-  "propCount": 2708,
+  "propCount": 2721,
   "props": {
     "a2ui_supported_elements": {
       "code": 32276,
@@ -784,6 +784,12 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "ai_hatch_in_app_subscriptions_enabled": {
+      "code": 39115,
+      "debugDefaultValue": true,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "ai_hatch_integration_bot_profile": {
       "code": 26190,
       "debugDefaultValue": "",
@@ -853,6 +859,12 @@
     "ai_hatch_options_card_enabled": {
       "code": 38676,
       "debugDefaultValue": true,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "ai_hatch_response_ux_parity_enabled": {
+      "code": 38773,
+      "debugDefaultValue": false,
       "defaultValue": false,
       "type": "bool"
     },
@@ -936,6 +948,12 @@
     },
     "ai_hatch_vm_auth_enabled": {
       "code": 37983,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "ai_hatch_vm_capability_sync_enabled": {
+      "code": 39093,
       "debugDefaultValue": false,
       "defaultValue": false,
       "type": "bool"
@@ -1818,6 +1836,12 @@
     },
     "aura_group_reactions_blocking_enabled": {
       "code": 33522,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "aura_group_reactions_editor_enabled": {
+      "code": 39086,
       "debugDefaultValue": false,
       "defaultValue": false,
       "type": "bool"
@@ -3012,6 +3036,12 @@
     },
     "capi_messaging_pairs_client_enabled": {
       "code": 38129,
+      "debugDefaultValue": true,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "capi_messaging_pairs_vpv_enabled": {
+      "code": 38364,
       "debugDefaultValue": true,
       "defaultValue": false,
       "type": "bool"
@@ -4863,6 +4893,12 @@
       "debugDefaultValue": 1210000,
       "defaultValue": 1210000,
       "type": "int"
+    },
+    "deleted_message_system_style_enabled": {
+      "code": 39057,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
     },
     "desktop_calling_ring_icon_enabled": {
       "code": 35376,
@@ -8265,6 +8301,12 @@
       "debugDefaultValue": false,
       "defaultValue": false,
       "type": "bool"
+    },
+    "overscroll_logo_theme": {
+      "code": 39075,
+      "debugDefaultValue": 0,
+      "defaultValue": 0,
+      "type": "int"
     },
     "p2b_calling_availability_experiment_enabled": {
       "code": 31098,
@@ -13270,6 +13312,12 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "wa_web_meta_one_mock_billing": {
+      "code": 39076,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "wa_web_meta_one_subscription_notifications_enabled": {
       "code": 38221,
       "debugDefaultValue": false,
@@ -15712,6 +15760,30 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "web_status_vpv_per_view_load_time_enabled": {
+      "code": 39100,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "web_status_vpv_rebuffering_load_time_enabled": {
+      "code": 39099,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "web_status_vpv_result_at_exit_enabled": {
+      "code": 39101,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "web_status_vpv_successful_view_consistency_enabled": {
+      "code": 39098,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "web_sticker_suggestions_enable": {
       "code": 4726,
       "debugDefaultValue": false,
@@ -15855,6 +15927,12 @@
       "debugDefaultValue": 60,
       "defaultValue": 60,
       "type": "int"
+    },
+    "web_voip_camera_fingerprint_logging_enabled": {
+      "code": 39096,
+      "debugDefaultValue": true,
+      "defaultValue": false,
+      "type": "bool"
     },
     "web_voip_capture_video_rotation_type": {
       "code": 27973,
@@ -16398,5 +16476,5 @@
     "web_socket_parallel_connection_enabled",
     "web_store_quota_manager_enabled"
   ],
-  "waVersion": "2.3000.1050031415"
+  "waVersion": "2.3000.1050169898"
 }

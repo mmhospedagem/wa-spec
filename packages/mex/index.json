@@ -1678,7 +1678,7 @@
       }
     },
     "ContactManagerCustomerProfileUpsert": {
-      "docId": "39017784967837337",
+      "docId": "28866283676339141",
       "operationKind": "mutation",
       "originalName": "WAWebContactManagerCustomerProfileUpsertMutation",
       "response": {
@@ -1692,6 +1692,9 @@
             {
               "lid": "string"
             }
+          ],
+          "unresolved_lids": [
+            "string"
           ]
         }
       },
@@ -2524,7 +2527,7 @@
       }
     },
     "EBMessageRangeQueryForThreads": {
-      "docId": "27443670391974737",
+      "docId": "28543107645309813",
       "operationKind": "query",
       "originalName": "EBMessageRangeQueryForThreadsQuery",
       "response": {
@@ -2653,8 +2656,6 @@
                           "mandrake_keys": {
                             "encrypted_mek": "unknown",
                             "mek_encryption_version": "number",
-                            "recipient_encrypted_mmk": "unknown",
-                            "recipient_encrypted_mmk_mailbox_head_hash": "string",
                             "recipient_mailbox_head_hash": "string",
                             "recipient_membership_proof": "string",
                             "recipient_membership_proof_leaf_index": "number",
@@ -2717,25 +2718,6 @@
         "includeAttachmentData": "boolean",
         "restore_payload_strings": "unknown",
         "restore_type": "enum:INITIAL_RESTORE|RANGE_QUERY_RESTORE"
-      }
-    },
-    "EBRegisterMinosMessageEncryptionKey": {
-      "docId": "25185089431099815",
-      "operationKind": "mutation",
-      "originalName": "EBRegisterMinosMessageEncryptionKeyMutation",
-      "response": {
-        "xfb_minos_register_message_encryption_key": {
-          "__typename": "string",
-          "code": "string",
-          "mek_fbid": "string",
-          "message": "string"
-        }
-      },
-      "variables": [
-        "input"
-      ],
-      "variablesShape": {
-        "input": {}
       }
     },
     "EditBizProfile": {
@@ -6138,30 +6120,6 @@
         "orgID": "string"
       }
     },
-    "OrgAdminGraphQLAppendAdminRoster": {
-      "docId": "28096717049979269",
-      "operationKind": "mutation",
-      "originalName": "WAWebOrgAdminGraphQLAppendAdminRosterMutation",
-      "response": {
-        "xwa_org_admin_roster_append": {
-          "added_count": "number",
-          "deduplicated_count": "number",
-          "error_reason": "enum:INVALID_EMAIL_BATCH",
-          "invalid_row_number": "number",
-          "status": "enum:SUCCESS",
-          "total_count": "number"
-        }
-      },
-      "variables": [
-        "input"
-      ],
-      "variablesShape": {
-        "input": {
-          "entries": "unknown",
-          "org_id": "string"
-        }
-      }
-    },
     "OrgAdminGraphQLDirectoryPage": {
       "docId": "28428616673445598",
       "operationKind": "query",
@@ -6371,7 +6329,7 @@
       }
     },
     "OrgAdminGraphQLOrgs": {
-      "docId": "28450688771254327",
+      "docId": "28528010626842072",
       "operationKind": "query",
       "originalName": "WAWebOrgAdminGraphQLOrgsQuery",
       "response": {
@@ -6379,14 +6337,22 @@
           "orgs": [
             {
               "description": "string",
-              "icon": {
+              "icon_large": {
+                "uri": "string"
+              },
+              "icon_small": {
+                "handle": "string",
                 "uri": "string"
               },
               "id": "string",
               "is_member_directory_enabled": "boolean",
-              "member_count": "number",
               "member_tag_options": "number",
+              "members": {
+                "count": "number"
+              },
               "name": "string",
+              "org_member_updated_ts_usec": "unknown",
+              "org_updated_ts_usec": "unknown",
               "viewer_role": "string"
             }
           ]
@@ -6396,7 +6362,7 @@
       "variablesShape": {}
     },
     "OrgAdminGraphQLRemoveMember": {
-      "docId": "28130496313288374",
+      "docId": "28986698047634303",
       "operationKind": "mutation",
       "originalName": "WAWebOrgAdminGraphQLRemoveMemberMutation",
       "response": {
@@ -6404,7 +6370,9 @@
           "error_reason": "string",
           "org": {
             "id": "string",
-            "member_count": "number"
+            "members": {
+              "count": "number"
+            }
           },
           "status": "enum:SUCCESS"
         }
@@ -6426,7 +6394,7 @@
       "response": {
         "xwa_org_admin_roster_replace": {
           "error_reason": "enum:INVALID_EMAIL_BATCH",
-          "invalid_row_number": "number",
+          "invalid_row_number": "unknown",
           "org": {
             "admin_roster": {
               "entries": [
@@ -6458,7 +6426,7 @@
       }
     },
     "OrgAdminGraphQLSetMemberRole": {
-      "docId": "28470063769311553",
+      "docId": "28722796247384351",
       "operationKind": "mutation",
       "originalName": "WAWebOrgAdminGraphQLSetMemberRoleMutation",
       "response": {
@@ -6466,7 +6434,9 @@
           "error_reason": "string",
           "org": {
             "id": "string",
-            "member_count": "number"
+            "members": {
+              "count": "number"
+            }
           },
           "status": "enum:SUCCESS"
         }
@@ -6517,7 +6487,7 @@
       }
     },
     "OrgAdminGraphQLUpdateOrg": {
-      "docId": "28301720222820867",
+      "docId": "26730170143346991",
       "operationKind": "mutation",
       "originalName": "WAWebOrgAdminGraphQLUpdateOrgMutation",
       "response": {
@@ -6525,14 +6495,22 @@
           "error_reason": "enum:INVALID_EMAIL_BATCH",
           "org": {
             "description": "string",
-            "icon": {
+            "icon_large": {
+              "uri": "string"
+            },
+            "icon_small": {
+              "handle": "string",
               "uri": "string"
             },
             "id": "string",
             "is_member_directory_enabled": "boolean",
-            "member_count": "number",
             "member_tag_options": "number",
+            "members": {
+              "count": "number"
+            },
             "name": "string",
+            "org_member_updated_ts_usec": "unknown",
+            "org_updated_ts_usec": "unknown",
             "viewer_role": "string"
           },
           "status": "enum:SUCCESS"
@@ -9139,5 +9117,5 @@
       }
     }
   },
-  "waVersion": "2.3000.1050031415"
+  "waVersion": "2.3000.1050169898"
 }
