@@ -1249,6 +1249,7 @@
         "INVOKE": 4,
         "INVOKE_META_AI_1ON1": 41,
         "INVOKE_META_AI_GROUP": 42,
+        "MEDIA_VIEWER": 50,
         "META_AI_LONG_PRESS_CONTEXT_MENU": 37,
         "META_AI_SETTINGS": 45,
         "NEW_CHAT": 3,
@@ -2904,6 +2905,7 @@
         "AI_CHARACTER_START_CHATTING_CLICK": 65,
         "AI_CHARACTER_UNHIDE": 227,
         "AI_CHAT_CLICK": 52,
+        "AI_CHAT_ROW_IMPRESSION": 291,
         "AI_CHAT_THREAD_VOICE_VIEW": 160,
         "AI_CREATION_ADVANCED_SETTINGS_PREVIEWED": 184,
         "AI_CREATION_AUDIENCE_ONLY_ME": 148,
@@ -4550,6 +4552,7 @@
       "module": "WAWebWamEnumDeviceClassification",
       "values": {
         "AR_GLASS": 6,
+        "AUTOMOTIVE": 8,
         "DESKTOP": 4,
         "FOLDABLE": 5,
         "MOBILE": 0,
@@ -5482,6 +5485,16 @@
         "MESSAGE_IMAGE": 4
       }
     },
+    "FMX_BUSINESS_HOLDOUT_GROUP": {
+      "export": "FMX_BUSINESS_HOLDOUT_GROUP",
+      "module": "WAWebWamEnumFmxBusinessHoldoutGroup",
+      "values": {
+        "CONTROL": 2,
+        "EXCLUDED": 3,
+        "TEST": 1,
+        "UNKNOWN": 0
+      }
+    },
     "FMX_ENTRY_POINT": {
       "export": "FMX_ENTRY_POINT",
       "module": "WAWebWamEnumFmxEntryPoint",
@@ -6300,15 +6313,19 @@
         "AI_MEDIA_EDITOR_FILTERS_APPLIED": 142,
         "AI_MEDIA_EDITOR_FILTERS_CLICKED": 140,
         "AI_MEDIA_EDITOR_FILTERS_PREVIEWED": 141,
+        "AI_MEDIA_EDITOR_LONG_PRESSED": 147,
         "AI_MEDIA_EDITOR_PRESETS_APPLIED": 134,
         "AI_MEDIA_EDITOR_PRESETS_CLICKED": 120,
         "AI_MEDIA_EDITOR_PRESETS_PREVIEWED": 123,
         "AI_MEDIA_EDITOR_PRESETS_SEND": 126,
         "AI_MEDIA_EDITOR_REGENERATE": 143,
+        "AI_MEDIA_EDITOR_REPORT_BUTTON_CLICKED": 148,
+        "AI_MEDIA_EDITOR_REPORT_SUBMITTED": 149,
         "AI_MEDIA_EDITOR_RESTYLE_APPLIED": 133,
         "AI_MEDIA_EDITOR_RESTYLE_CLICKED": 119,
         "AI_MEDIA_EDITOR_RESTYLE_PREVIEWED": 122,
         "AI_MEDIA_EDITOR_RESTYLE_SEND": 125,
+        "AI_MEDIA_EDITOR_SAVE_BUTTON_CLICKED": 150,
         "AI_MEDIA_EDITOR_SEND": 144,
         "AI_MEDIA_EDITOR_SEND_CANCEL": 130,
         "AI_MEDIA_EDITOR_UNDO_CLICKED": 146,
@@ -6772,6 +6789,15 @@
         "PIX_SELECT_BANK_VIEW": 51,
         "PIX_UNDERAGE_ERROR_SHOWN": 76,
         "REJECT_EVENT_SHARING_TOS": 32,
+        "SEND_PAYMENT_ENTER_AMOUNT_DISMISS": 114,
+        "SEND_PAYMENT_ENTER_AMOUNT_VIEW": 113,
+        "SEND_PAYMENT_ENTRY_POINT_CLICK": 110,
+        "SEND_PAYMENT_ENTRY_POINT_IMPRESSION": 109,
+        "SEND_PAYMENT_RECIPIENT_RESOLUTION_STATUS": 112,
+        "SEND_PAYMENT_RECIPIENT_SELECTED": 111,
+        "SEND_PAYMENT_RECIPIENT_UNAVAILABLE_ACTION": 116,
+        "SEND_PAYMENT_RECIPIENT_UNAVAILABLE_SHOWN": 115,
+        "SEND_PAYMENT_RETURNED_WITHOUT_AUTH": 117,
         "START_CHAT_FROM_CTWA": 34,
         "USER_APP_REDIRECT_ACCEPT": 46,
         "USER_APP_REDIRECT_DENY": 47,
@@ -9330,6 +9356,16 @@
         "PREMIUM": 1
       }
     },
+    "META_AI_READ_ONLY_REASON_TYPE": {
+      "export": "META_AI_READ_ONLY_REASON_TYPE",
+      "module": "WAWebWamEnumMetaAiReadOnlyReasonType",
+      "values": {
+        "HATCH_LINKED": 3,
+        "NOT_READ_ONLY": 2,
+        "UNKNOWN": 1,
+        "UPGRADED_TO_HATCH": 4
+      }
+    },
     "META_AI_UPSELL_CTA_OPERATION_TYPE": {
       "export": "META_AI_UPSELL_CTA_OPERATION_TYPE",
       "module": "WAWebWamEnumMetaAiUpsellCtaOperationType",
@@ -9343,6 +9379,9 @@
       "export": "META_AI_UPSELL_CTA_SOURCE_TYPE",
       "module": "WAWebWamEnumMetaAiUpsellCtaSourceType",
       "values": {
+        "MUSE_META_AI_BANNER": 4,
+        "MUSE_META_AI_NULL_STATE": 5,
+        "MUSE_META_AI_PROACTIVE": 6,
         "MUSE_SPARK_PROACTIVE_MESSAGE": 3,
         "PERSISTENT_CHAT_BANNER": 1,
         "PROMOTIONAL_MESSAGE": 2
@@ -10964,6 +11003,9 @@
         "PAY_UPI_ID_BUTTON": 266,
         "PAY_WITH_UPI_BUTTON": 236,
         "PILL_BUTTON": 385,
+        "PIX_APP_SWITCH_COMPLETE_TRANSACTION_STATUS": 408,
+        "PIX_APP_SWITCH_DEEP_LINK": 407,
+        "PIX_APP_SWITCH_HANDOFF_STATUS": 406,
         "PIX_ICON_ATTACHMENT_TRAY": 381,
         "PIX_INVITE_ASK_TO_SHARE_PIX_KEY": 376,
         "PIX_INVITE_GO_TO_PAYMENTS": 378,
@@ -10982,6 +11024,8 @@
         "PIX_ROW": 209,
         "PIX_SELECT_BANK_GRID": 396,
         "PIX_SELECT_BANK_LIST": 397,
+        "PIX_SEND_PAYMENT_RECEIVED": 409,
+        "PIX_SEND_RECIPIENT_RESOLUTION": 405,
         "PIX_TYPE": 190,
         "PMT_DETAILS": 44,
         "PRIVACY_AND_TERM_BUTTON": 95,
@@ -11436,7 +11480,6 @@
         "MSGROM": 37,
         "MSGRP": 31,
         "MSGRSG": 63,
-        "MSGRT": 60,
         "MSGRVR": 52,
         "MSGRW": 32,
         "PORTAL": 18,
@@ -15303,6 +15346,8 @@
       "module": "WAWebWamEnumThreadActionTypes",
       "values": {
         "AI_HOME_IMPRESSION": 15,
+        "ARCHIVE": 29,
+        "CLEAR": 27,
         "CLICK_CHAT_HISTORY": 6,
         "CLICK_CHAT_INFO": 22,
         "CLICK_CONTINUE_CHAT_MODULE": 16,
@@ -15313,10 +15358,12 @@
         "DELETE": 3,
         "FIRST_PROMPT_SENT": 12,
         "GREETING_RECEIVED": 21,
+        "MUTE": 25,
         "PIN": 1,
         "RENAME": 4,
         "SEARCH_RESULT_CLICK": 13,
         "SEARCH_RESULT_SHOWN": 14,
+        "SHARE": 28,
         "THREAD_CREATE_REQUEST": 19,
         "THREAD_CREATE_RESPONSE": 20,
         "THREAD_ENTER": 8,
@@ -15325,6 +15372,8 @@
         "THREAD_PHOTO_CHANGED": 18,
         "THREE_DOT_MENU": 11,
         "TOP_NAV": 24,
+        "UNARCHIVE": 30,
+        "UNMUTE": 26,
         "UNPIN": 2
       }
     },
@@ -16688,7 +16737,9 @@
         "EMAIL_TYPING_START": 2,
         "ENTRY_POINT_CLICK": 1,
         "GMAIL_CLICK": 3,
-        "MAILTO_CLICK": 4
+        "MAILTO_CLICK": 4,
+        "SERVER_SEND_RESULT": 6,
+        "SERVER_SEND_START": 5
       }
     },
     "WEBC_EMAIL_INVITE_ENTRY_POINT_TYPE": {
@@ -16697,6 +16748,19 @@
       "values": {
         "GROUP_INFO_EMAIL": 1,
         "INTRO_PANEL_EMAIL": 2
+      }
+    },
+    "WEBC_EMAIL_INVITE_SERVER_SEND_RESULT_TYPE": {
+      "export": "WEBC_EMAIL_INVITE_SERVER_SEND_RESULT_TYPE",
+      "module": "WAWebWamEnumWebcEmailInviteServerSendResultType",
+      "values": {
+        "INVALID_BATCH": 5,
+        "NOT_AUTHORIZED": 4,
+        "PARTIAL": 2,
+        "SKIPPED": 6,
+        "SUCCESS": 1,
+        "UNAVAILABLE": 3,
+        "UNCERTAIN": 7
       }
     },
     "WEBC_ENV_CODE": {
@@ -17457,6 +17521,7 @@
         "BB_CREDITS": 28,
         "BIZ_AI_AGENT_THREAD": 46,
         "BIZ_AI_HOME": 47,
+        "BIZ_SUBS_CHURNED_USER_REMINDER_NOTIF": 97,
         "BIZ_SUBS_PAYMENT_ABANDONMENT_NOTIF": 95,
         "BIZ_SUB_VERIFICATION_ELIGIBLE_BUSINESS_ALERT": 94,
         "BIZ_SUB_VERIFICATION_ELIGIBLE_NOTIFICATION": 93,
@@ -17478,6 +17543,7 @@
         "CHAT_THREAD_IMAGINE": 37,
         "CHAT_THREAD_THINKING": 36,
         "CHAT_THREAD_VIDEO": 38,
+        "CONSUMER_SUBS_CHURNED_USER_REMINDER_NOTIF": 96,
         "CONSUMER_SUBS_PAYMENT_ABANDONMENT_NOTIF": 92,
         "CUSTOMER_LEAD_GEN": 51,
         "CUSTOM_REACTIONS_SETTINGS": 69,
@@ -19351,6 +19417,12 @@
           "falcoName": "is_user_created_agent",
           "id": 10,
           "type": "boolean"
+        },
+        "metaAiReadOnlyReason": {
+          "enum": "META_AI_READ_ONLY_REASON_TYPE",
+          "falcoName": "meta_ai_read_only_reason",
+          "id": 58,
+          "type": "enum"
         },
         "metricCount": {
           "falcoName": "metric_count",
@@ -38053,6 +38125,22 @@
           "falcoName": "webc_email_invite_entry_point",
           "id": 3,
           "type": "enum"
+        },
+        "webcEmailInviteFailedCount": {
+          "falcoName": "webc_email_invite_failed_count",
+          "id": 5,
+          "type": "integer"
+        },
+        "webcEmailInviteSentCount": {
+          "falcoName": "webc_email_invite_sent_count",
+          "id": 6,
+          "type": "integer"
+        },
+        "webcEmailInviteServerSendResult": {
+          "enum": "WEBC_EMAIL_INVITE_SERVER_SEND_RESULT_TYPE",
+          "falcoName": "webc_email_invite_server_send_result",
+          "id": 7,
+          "type": "enum"
         }
       },
       "id": 8576,
@@ -48049,6 +48137,11 @@
           "falcoName": "user_locale",
           "id": 15,
           "type": "string"
+        },
+        "waWebVisitId": {
+          "falcoName": "wa_web_visit_id",
+          "id": 19,
+          "type": "integer"
         }
       },
       "id": 2576,
@@ -51162,6 +51255,12 @@
           "id": 3,
           "type": "integer"
         },
+        "metaAiReadOnlyReason": {
+          "enum": "META_AI_READ_ONLY_REASON_TYPE",
+          "falcoName": "meta_ai_read_only_reason",
+          "id": 5,
+          "type": "enum"
+        },
         "metaAiUpsellCtaOperation": {
           "enum": "META_AI_UPSELL_CTA_OPERATION_TYPE",
           "falcoName": "meta_ai_upsell_cta_operation",
@@ -51173,6 +51272,11 @@
           "falcoName": "meta_ai_upsell_cta_source",
           "id": 2,
           "type": "enum"
+        },
+        "upsellBannerVariant": {
+          "falcoName": "upsell_banner_variant",
+          "id": 4,
+          "type": "integer"
         }
       },
       "id": 6532,
@@ -55650,6 +55754,12 @@
           "falcoName": "country_shown",
           "id": 2,
           "type": "boolean"
+        },
+        "fmxBusinessHoldoutGroup": {
+          "enum": "FMX_BUSINESS_HOLDOUT_GROUP",
+          "falcoName": "fmx_business_holdout_group",
+          "id": 11,
+          "type": "enum"
         },
         "fmxEntryPoint": {
           "enum": "FMX_ENTRY_POINT",
@@ -70916,7 +71026,7 @@
       "label": "psIdValue"
     }
   ],
-  "waVersion": "2.3000.1050169898",
+  "waVersion": "2.3000.1050302056",
   "wireFormat": {
     "markers": {
       "event": 1,

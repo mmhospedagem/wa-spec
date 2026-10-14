@@ -116,7 +116,7 @@
       "type": "bool"
     }
   },
-  "propCount": 2721,
+  "propCount": 2731,
   "props": {
     "a2ui_supported_elements": {
       "code": 32276,
@@ -784,6 +784,12 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "ai_hatch_in_app_activation_enabled": {
+      "code": 39167,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "ai_hatch_in_app_subscriptions_enabled": {
       "code": 39115,
       "debugDefaultValue": true,
@@ -999,6 +1005,12 @@
       "debugDefaultValue": true,
       "defaultValue": false,
       "type": "bool"
+    },
+    "ai_meta_ai_muse_chat_readonly_message_drop_variant": {
+      "code": 39145,
+      "debugDefaultValue": 0,
+      "defaultValue": 0,
+      "type": "int"
     },
     "ai_meta_ai_muse_default_assistant_variant": {
       "code": 38386,
@@ -5964,8 +5976,8 @@
     },
     "enable_webcodec_video_encode": {
       "code": 26079,
-      "debugDefaultValue": false,
-      "defaultValue": false,
+      "debugDefaultValue": true,
+      "defaultValue": true,
       "type": "bool"
     },
     "enable_webcodec_video_encoder_output_watchdog": {
@@ -6021,6 +6033,12 @@
       "debugDefaultValue": 5,
       "defaultValue": 5,
       "type": "int"
+    },
+    "enhanced_mention_suggestions_allow_non_group_members_with_group_members": {
+      "code": 39242,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
     },
     "enhanced_mention_suggestions_min_mention_char_count": {
       "code": 28089,
@@ -6165,6 +6183,12 @@
       "debugDefaultValue": "partnertoken",
       "defaultValue": "partnertoken",
       "type": "string"
+    },
+    "falco_md_id_fix_web_enabled": {
+      "code": 39179,
+      "debugDefaultValue": true,
+      "defaultValue": false,
+      "type": "bool"
     },
     "favorite_sticker_sync_after_pairing_enabled_web": {
       "code": 20815,
@@ -7006,6 +7030,12 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "inbox_dim_muted_chats": {
+      "code": 36646,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "inbox_filters_custom_smb_enabled": {
       "code": 7637,
       "debugDefaultValue": false,
@@ -7548,6 +7578,12 @@
     },
     "media_cross_reference_upload_enabled": {
       "code": 35109,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "media_default_hd_upload_quality_enabled": {
+      "code": 15740,
       "debugDefaultValue": false,
       "defaultValue": false,
       "type": "bool"
@@ -10834,6 +10870,12 @@
       "defaultValue": 3,
       "type": "int"
     },
+    "status_companion_read_sync_fix_enabled": {
+      "code": 39224,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "status_e2ee_recv_over_status_stanza": {
       "code": 27622,
       "debugDefaultValue": false,
@@ -12508,6 +12550,12 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "wa_subs_sub_management_page_enabled": {
+      "code": 39144,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "wa_subs_try_for_zero_enabled": {
       "code": 37616,
       "debugDefaultValue": false,
@@ -12522,6 +12570,12 @@
     },
     "wa_subs_wa_plus_paywall_optimization_enabled": {
       "code": 38066,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
+    "wa_teamlink_invitation_privacy_gate_enabled": {
+      "code": 39154,
       "debugDefaultValue": false,
       "defaultValue": false,
       "type": "bool"
@@ -16252,6 +16306,12 @@
       "defaultValue": false,
       "type": "bool"
     },
+    "win_hybrid_bridge_ui_thread_completion_enabled": {
+      "code": 39187,
+      "debugDefaultValue": false,
+      "defaultValue": false,
+      "type": "bool"
+    },
     "win_hybrid_bt_enabled": {
       "code": 30041,
       "debugDefaultValue": true,
@@ -16458,6 +16518,7 @@
     "direct_connection_business_numbers",
     "disable_auto_download",
     "external_ctx_url_param_names",
+    "falco_md_id_fix_web_enabled",
     "in_app_support_v2_number_prefixes",
     "parent_group_view_enabled",
     "wa_web_console_log_level",
@@ -16476,5 +16537,5 @@
     "web_socket_parallel_connection_enabled",
     "web_store_quota_manager_enabled"
   ],
-  "waVersion": "2.3000.1050169898"
+  "waVersion": "2.3000.1050302056"
 }

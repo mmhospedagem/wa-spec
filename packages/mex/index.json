@@ -1369,6 +1369,34 @@
         "id": "string"
       }
     },
+    "CoexCanonicalState": {
+      "docId": "38737092685936550",
+      "operationKind": "query",
+      "originalName": "WAWebCoexCanonicalStateQuery",
+      "response": {
+        "xfb_whatsapp_coexistence_bsp_info_query": {
+          "product_states": {
+            "states": [
+              {
+                "coex_connection_descriptor": {
+                  "product": "unknown",
+                  "provider_id": "string"
+                },
+                "onboarding_status": "string"
+              }
+            ]
+          }
+        }
+      },
+      "variables": [
+        "request"
+      ],
+      "variablesShape": {
+        "request": {
+          "phone_number": "number"
+        }
+      }
+    },
     "ConsumerFetchQuickPromotions": {
       "docId": "35462584533386409",
       "operationKind": "query",
@@ -5174,7 +5202,7 @@
       }
     },
     "GetNumbersForBrandIds": {
-      "docId": "33391034967211217",
+      "docId": "28724500483870087",
       "operationKind": "query",
       "originalName": "WAWebGetNumbersForBrandIdsJobQuery",
       "response": {
@@ -7464,7 +7492,7 @@
       }
     },
     "SignupMetadata": {
-      "docId": "26378108788468347",
+      "docId": "28516250088045061",
       "operationKind": "query",
       "originalName": "WAWebSignupMetadataQuery",
       "response": {
@@ -8904,7 +8932,7 @@
                           "server_formatted_text": "string",
                           "show_creative_terms": "boolean",
                           "show_select_all": "boolean",
-                          "signals_action": "enum:ENABLE_AAM|ENABLE_AUTOMATIC_EVENTS|ENABLE_CAPIG|OPEN_PIXEL_HELPER",
+                          "signals_action": "enum:COPY_PIXEL_CODE|ENABLE_AAM|ENABLE_AUTOMATIC_EVENTS|ENABLE_CAPIG|OPEN_PIXEL_HELPER",
                           "single_apply_uses_template": "boolean",
                           "sparkline_label": "string",
                           "spec_type": "string",
@@ -9117,5 +9145,5 @@
       }
     }
   },
-  "waVersion": "2.3000.1050169898"
+  "waVersion": "2.3000.1050302056"
 }

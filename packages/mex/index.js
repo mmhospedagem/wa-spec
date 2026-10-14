@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1050169898
+// WhatsApp Version: 2.3000.1050302056
 'use strict'
 
 const WA_MEX_PERSIST_IDS = Object.freeze({
@@ -49,6 +49,7 @@ const WA_MEX_PERSIST_IDS = Object.freeze({
     ClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalog: Object.freeze({ docId: '28392457797119809', clientDocId: '28392457797119809' }),
     ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalog: Object.freeze({ docId: '28535935112706483', clientDocId: '28535935112706483' }),
     ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalog: Object.freeze({ docId: '28909016462037998', clientDocId: '28909016462037998' }),
+    CoexCanonicalState: Object.freeze({ docId: '38737092685936550', clientDocId: '38737092685936550' }),
     ConsumerFetchQuickPromotions: Object.freeze({ docId: '35462584533386409', clientDocId: '35462584533386409' }),
     ConsumerQuickPromotionActionGraphQL: Object.freeze({ docId: '25690382143972563', clientDocId: '25690382143972563' }),
     ContactManagerCustomerProfile: Object.freeze({ docId: '28155766940789531', clientDocId: '28155766940789531' }),
@@ -132,7 +133,7 @@ const WA_MEX_PERSIST_IDS = Object.freeze({
     GetAccountNonce: Object.freeze({ docId: '25091178200467555', clientDocId: '25091178200467555' }),
     GetDsbInfo: Object.freeze({ docId: '9982897848413251', clientDocId: '9982897848413251' }),
     GetFBAccountPages: Object.freeze({ docId: '24564518546541529', clientDocId: '24564518546541529' }),
-    GetNumbersForBrandIds: Object.freeze({ docId: '33391034967211217', clientDocId: '33391034967211217' }),
+    GetNumbersForBrandIds: Object.freeze({ docId: '28724500483870087', clientDocId: '28724500483870087' }),
     GetPrivacyLists: Object.freeze({ docId: '26806428515612550', clientDocId: '26806428515612550' }),
     GetPrivacySettings: Object.freeze({ docId: '25637004609323493', clientDocId: '25637004609323493' }),
     GetUsername: Object.freeze({ docId: '25347099718279209', clientDocId: '25347099718279209' }),
@@ -200,7 +201,7 @@ const WA_MEX_PERSIST_IDS = Object.freeze({
     RotateLabyrinthEpoch: Object.freeze({ docId: '27545094465170765', clientDocId: '27545094465170765' }),
     SetUsername: Object.freeze({ docId: '25757341163897635', clientDocId: '25757341163897635' }),
     SetUsernameKey: Object.freeze({ docId: '9749436995157074', clientDocId: '9749436995157074' }),
-    SignupMetadata: Object.freeze({ docId: '26378108788468347', clientDocId: '26378108788468347' }),
+    SignupMetadata: Object.freeze({ docId: '28516250088045061', clientDocId: '28516250088045061' }),
     StartConversationTemplateReengagementWithCatalogSection: Object.freeze({ docId: '9481135698661663', clientDocId: '9481135698661663' }),
     StartConversationsTemplateCustomerActionsSectionIsEligibleForAIRegeneration: Object.freeze({ docId: '24901233246147977', clientDocId: '24901233246147977' }),
     StartConversationsTemplateDialogContainerBodyGraphQLWelcomeMessageFlows: Object.freeze({ docId: '26538442779077960', clientDocId: '26538442779077960' }),
@@ -287,6 +288,7 @@ const WA_MEX_OPERATION_SCHEMAS = Object.freeze({
     ClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalog: Object.freeze({ operationKind: 'query', variables: Object.freeze(['id']) }),
     ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalog: Object.freeze({ operationKind: 'query', variables: Object.freeze(['id']) }),
     ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalog: Object.freeze({ operationKind: 'query', variables: Object.freeze(['id']) }),
+    CoexCanonicalState: Object.freeze({ operationKind: 'query', variables: Object.freeze(['request']) }),
     ConsumerFetchQuickPromotions: Object.freeze({ operationKind: 'query', variables: Object.freeze(['nux_ids', 'trigger_context']) }),
     ConsumerQuickPromotionActionGraphQL: Object.freeze({ operationKind: 'mutation', variables: Object.freeze(['input']) }),
     ContactManagerCustomerProfile: Object.freeze({ operationKind: 'query', variables: Object.freeze(['lid']) }),

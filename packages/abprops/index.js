@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1050169898
+// WhatsApp Version: 2.3000.1050302056
 'use strict'
 
 // Every server-driven experiment config WA Web knows about, keyed by the name
@@ -118,6 +118,7 @@ const WA_ABPROPS = Object.freeze({
     ai_hatch_gzip_encoding_enabled: Object.freeze({ code: 37777, type: "bool", defaultValue: false, debugDefaultValue: true }),
     ai_hatch_ideas_enabled: Object.freeze({ code: 37223, type: "bool", defaultValue: false, debugDefaultValue: false }),
     ai_hatch_identity_enabled: Object.freeze({ code: 37588, type: "bool", defaultValue: false, debugDefaultValue: true }),
+    ai_hatch_in_app_activation_enabled: Object.freeze({ code: 39167, type: "bool", defaultValue: false, debugDefaultValue: false }),
     ai_hatch_in_app_subscriptions_enabled: Object.freeze({ code: 39115, type: "bool", defaultValue: false, debugDefaultValue: true }),
     ai_hatch_integration_bot_profile: Object.freeze({ code: 26190, type: "string", defaultValue: "", debugDefaultValue: "" }),
     ai_hatch_integration_enabled: Object.freeze({ code: 26189, type: "bool", defaultValue: false, debugDefaultValue: false }),
@@ -154,6 +155,7 @@ const WA_ABPROPS = Object.freeze({
     ai_learning_clear_chat_disable_empty_chats: Object.freeze({ code: 26745, type: "bool", defaultValue: false, debugDefaultValue: false }),
     ai_maiba_wass_migration_receiving: Object.freeze({ code: 27083, type: "bool", defaultValue: false, debugDefaultValue: false }),
     ai_maiba_wass_migration_sending: Object.freeze({ code: 27084, type: "bool", defaultValue: false, debugDefaultValue: true }),
+    ai_meta_ai_muse_chat_readonly_message_drop_variant: Object.freeze({ code: 39145, type: "int", defaultValue: 0, debugDefaultValue: 0 }),
     ai_meta_ai_muse_default_assistant_variant: Object.freeze({ code: 38386, type: "int", defaultValue: 0, debugDefaultValue: 0 }),
     ai_meta_ai_prekey_cleanup_enabled: Object.freeze({ code: 31941, type: "bool", defaultValue: false, debugDefaultValue: false }),
     ai_meta_ai_thread_creation_enabled: Object.freeze({ code: 34964, type: "bool", defaultValue: false, debugDefaultValue: false }),
@@ -981,7 +983,7 @@ const WA_ABPROPS = Object.freeze({
     enable_web_voip_webtransport_group_calls: Object.freeze({ code: 34645, type: "bool", defaultValue: false, debugDefaultValue: true }),
     enable_web_voip_worker_pool_reclaim_on_rejoin: Object.freeze({ code: 33597, type: "bool", defaultValue: true, debugDefaultValue: true }),
     enable_webcodec_require_keyframe: Object.freeze({ code: 29510, type: "bool", defaultValue: true, debugDefaultValue: true }),
-    enable_webcodec_video_encode: Object.freeze({ code: 26079, type: "bool", defaultValue: false, debugDefaultValue: false }),
+    enable_webcodec_video_encode: Object.freeze({ code: 26079, type: "bool", defaultValue: true, debugDefaultValue: true }),
     enable_webcodec_video_encoder_output_watchdog: Object.freeze({ code: 35420, type: "bool", defaultValue: false, debugDefaultValue: false }),
     enable_webrtc_video_jb: Object.freeze({ code: 27591, type: "bool", defaultValue: false, debugDefaultValue: false }),
     enable_wefr_client_expo_pulse: Object.freeze({ code: 10230, type: "bool", defaultValue: false, debugDefaultValue: true }),
@@ -991,6 +993,7 @@ const WA_ABPROPS = Object.freeze({
     enable_windows_xdr_chat_handoff: Object.freeze({ code: 24783, type: "bool", defaultValue: false, debugDefaultValue: true }),
     enable_windows_xdr_wns_pkey: Object.freeze({ code: 32324, type: "bool", defaultValue: false, debugDefaultValue: true }),
     enhanced_mention_limit: Object.freeze({ code: 25951, type: "int", defaultValue: 5, debugDefaultValue: 5 }),
+    enhanced_mention_suggestions_allow_non_group_members_with_group_members: Object.freeze({ code: 39242, type: "bool", defaultValue: false, debugDefaultValue: false }),
     enhanced_mention_suggestions_min_mention_char_count: Object.freeze({ code: 28089, type: "int", defaultValue: -1, debugDefaultValue: -1 }),
     enhanced_mention_suggestions_non_group_members_enabled: Object.freeze({ code: 24852, type: "bool", defaultValue: false, debugDefaultValue: false }),
     ephemeral_sync_response: Object.freeze({ code: 2714, type: "bool", defaultValue: false, debugDefaultValue: false }),
@@ -1015,6 +1018,7 @@ const WA_ABPROPS = Object.freeze({
     external_ctx_authorise_wa_chat: Object.freeze({ code: 11655, type: "bool", defaultValue: false, debugDefaultValue: false }),
     external_ctx_foa_logging: Object.freeze({ code: 13565, type: "int", defaultValue: 1, debugDefaultValue: 1 }),
     external_ctx_url_param_names: Object.freeze({ code: 12726, type: "string", defaultValue: "partnertoken", debugDefaultValue: "partnertoken" }),
+    falco_md_id_fix_web_enabled: Object.freeze({ code: 39179, type: "bool", defaultValue: false, debugDefaultValue: true }),
     favorite_sticker_sync_after_pairing_enabled_web: Object.freeze({ code: 20815, type: "bool", defaultValue: false, debugDefaultValue: false }),
     favorites_limit: Object.freeze({ code: 7267, type: "int", defaultValue: 100, debugDefaultValue: 100 }),
     feature_key_store_infra_enabled: Object.freeze({ code: 26829, type: "bool", defaultValue: false, debugDefaultValue: true }),
@@ -1155,6 +1159,7 @@ const WA_ABPROPS = Object.freeze({
     inapp_signup_qpl_logging_enabled: Object.freeze({ code: 28806, type: "bool", defaultValue: false, debugDefaultValue: true }),
     inapp_signup_received_card_enabled: Object.freeze({ code: 33503, type: "bool", defaultValue: false, debugDefaultValue: true }),
     inapp_signup_web_cta_logging_enabled: Object.freeze({ code: 30498, type: "bool", defaultValue: false, debugDefaultValue: true }),
+    inbox_dim_muted_chats: Object.freeze({ code: 36646, type: "bool", defaultValue: false, debugDefaultValue: false }),
     inbox_filters_custom_smb_enabled: Object.freeze({ code: 7637, type: "bool", defaultValue: false, debugDefaultValue: false }),
     inbox_filters_enabled: Object.freeze({ code: 5171, type: "bool", defaultValue: false, debugDefaultValue: false }),
     inbox_filters_haptic_feedback_enabled: Object.freeze({ code: 6052, type: "bool", defaultValue: false, debugDefaultValue: false }),
@@ -1246,6 +1251,7 @@ const WA_ABPROPS = Object.freeze({
     md_syncd_mutation_summary_logging: Object.freeze({ code: 27125, type: "string", defaultValue: "{\"allowlist\": []}", debugDefaultValue: "{\"allowlist\": []}" }),
     media_cross_reference_download_enabled: Object.freeze({ code: 35111, type: "bool", defaultValue: false, debugDefaultValue: false }),
     media_cross_reference_upload_enabled: Object.freeze({ code: 35109, type: "bool", defaultValue: false, debugDefaultValue: false }),
+    media_default_hd_upload_quality_enabled: Object.freeze({ code: 15740, type: "bool", defaultValue: false, debugDefaultValue: false }),
     media_elst_timing_refinement_enabled: Object.freeze({ code: 36067, type: "bool", defaultValue: false, debugDefaultValue: true }),
     media_force_transcode_on_elst: Object.freeze({ code: 30235, type: "bool", defaultValue: false, debugDefaultValue: true }),
     media_hub_history_max_days: Object.freeze({ code: 22518, type: "int", defaultValue: 14, debugDefaultValue: 14 }),
@@ -1793,6 +1799,7 @@ const WA_ABPROPS = Object.freeze({
     status_archive_refetch_old_music_artwork_enabled: Object.freeze({ code: 37213, type: "bool", defaultValue: false, debugDefaultValue: false }),
     status_chain_from_cl_mode: Object.freeze({ code: 27343, type: "int", defaultValue: 0, debugDefaultValue: 0 }),
     status_chain_from_my_interaction_limit: Object.freeze({ code: 27011, type: "int", defaultValue: 3, debugDefaultValue: 3 }),
+    status_companion_read_sync_fix_enabled: Object.freeze({ code: 39224, type: "bool", defaultValue: false, debugDefaultValue: false }),
     status_e2ee_recv_over_status_stanza: Object.freeze({ code: 27622, type: "bool", defaultValue: false, debugDefaultValue: false }),
     status_e2ee_send_over_status_stanza: Object.freeze({ code: 27620, type: "bool", defaultValue: false, debugDefaultValue: false }),
     status_future_proofing: Object.freeze({ code: 9522, type: "bool", defaultValue: false, debugDefaultValue: false }),
@@ -2072,9 +2079,11 @@ const WA_ABPROPS = Object.freeze({
     wa_subs_benefit_loss_enabled: Object.freeze({ code: 37617, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_subs_cancel_anytime_enabled: Object.freeze({ code: 37615, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_subs_mo_consumer_paywall_optimization_enabled: Object.freeze({ code: 38067, type: "bool", defaultValue: false, debugDefaultValue: false }),
+    wa_subs_sub_management_page_enabled: Object.freeze({ code: 39144, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_subs_try_for_zero_enabled: Object.freeze({ code: 37616, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_subs_wa_plus_hero_benefits_on_paywall_enabled: Object.freeze({ code: 38861, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_subs_wa_plus_paywall_optimization_enabled: Object.freeze({ code: 38066, type: "bool", defaultValue: false, debugDefaultValue: false }),
+    wa_teamlink_invitation_privacy_gate_enabled: Object.freeze({ code: 39154, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_thumbnail_gen_in_worker_enabled: Object.freeze({ code: 37062, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_vpv_logging_phases_enabled: Object.freeze({ code: 35650, type: "bool", defaultValue: false, debugDefaultValue: false }),
     wa_web_adaptive_layout_enabled: Object.freeze({ code: 30140, type: "bool", defaultValue: false, debugDefaultValue: false }),
@@ -2696,6 +2705,7 @@ const WA_ABPROPS = Object.freeze({
     win_call_log_send_outgoing_syncd_mutations: Object.freeze({ code: 5308, type: "bool", defaultValue: false, debugDefaultValue: true }),
     win_enable_ss_button_audio: Object.freeze({ code: 9633, type: "bool", defaultValue: false, debugDefaultValue: false }),
     win_hybrid_background_message_sync: Object.freeze({ code: 37827, type: "bool", defaultValue: false, debugDefaultValue: true }),
+    win_hybrid_bridge_ui_thread_completion_enabled: Object.freeze({ code: 39187, type: "bool", defaultValue: false, debugDefaultValue: false }),
     win_hybrid_bt_enabled: Object.freeze({ code: 30041, type: "bool", defaultValue: false, debugDefaultValue: true }),
     win_hybrid_eager_device_watching: Object.freeze({ code: 37128, type: "bool", defaultValue: false, debugDefaultValue: true }),
     win_hybrid_extension_skip_reinstall: Object.freeze({ code: 38870, type: "bool", defaultValue: false, debugDefaultValue: true }),
@@ -3546,6 +3556,7 @@ const WA_ABPROPS_BY_CODE = Object.freeze({
     15694: "quoted_message_user_journey_logging_enabled",
     15714: "wamo_agm_enabled",
     15722: "group_history_notice_receive",
+    15740: "media_default_hd_upload_quality_enabled",
     15754: "channels_open_qpl_improvements_enabled",
     15772: "create_group_and_add_member_overflow",
     15884: "optimized_delivery_signal_collection_on_companions_enabled",
@@ -5228,6 +5239,7 @@ const WA_ABPROPS_BY_CODE = Object.freeze({
     36574: "wa_hybrid_collect_new_memory_metrics",
     36576: "smb_web_customer_management_custom_fields",
     36583: "scheduled_messages_smart_defaults",
+    36646: "inbox_dim_muted_chats",
     36716: "wa_webtp_print_pdf_enabled",
     36759: "ai_meta_ai_thread_rendering_enabled",
     36763: "acp2_group_chats_enabled",
@@ -5476,7 +5488,15 @@ const WA_ABPROPS_BY_CODE = Object.freeze({
     39099: "web_status_vpv_rebuffering_load_time_enabled",
     39100: "web_status_vpv_per_view_load_time_enabled",
     39101: "web_status_vpv_result_at_exit_enabled",
-    39115: "ai_hatch_in_app_subscriptions_enabled"
+    39115: "ai_hatch_in_app_subscriptions_enabled",
+    39144: "wa_subs_sub_management_page_enabled",
+    39145: "ai_meta_ai_muse_chat_readonly_message_drop_variant",
+    39154: "wa_teamlink_invitation_privacy_gate_enabled",
+    39167: "ai_hatch_in_app_activation_enabled",
+    39179: "falco_md_id_fix_web_enabled",
+    39187: "win_hybrid_bridge_ui_thread_completion_enabled",
+    39224: "status_companion_read_sync_fix_enabled",
+    39242: "enhanced_mention_suggestions_allow_non_group_members_with_group_members"
 })
 
 const WA_GROUP_ABPROPS_BY_CODE = Object.freeze({
@@ -5503,7 +5523,7 @@ const WA_GROUP_ABPROPS_BY_CODE = Object.freeze({
 
 // Props the runtime permits reading before the config cache has resolved.
 // Reading anything else that early logs a warning and yields the default.
-const WA_ABPROPS_USED_BEFORE_INIT = Object.freeze(["community_admin_promotion_one_time_prompt", "direct_connection_business_numbers", "disable_auto_download", "external_ctx_url_param_names", "in_app_support_v2_number_prefixes", "parent_group_view_enabled", "wa_web_console_log_level", "wa_web_pre_chat_device_id_test", "wds_radius_and_casing", "web_abprop_core_wam_runtime", "web_abprop_screen_lock_enabled", "web_design_refresh", "web_disable_logs_low_end_device", "web_enable_profile_pic_thumb_db_caching", "web_image_max_edge", "web_low_end_device_level", "web_material_refresh", "web_native_fetch_media_download", "web_offline_resume_qpl_enabled", "web_socket_parallel_connection_enabled", "web_store_quota_manager_enabled"])
+const WA_ABPROPS_USED_BEFORE_INIT = Object.freeze(["community_admin_promotion_one_time_prompt", "direct_connection_business_numbers", "disable_auto_download", "external_ctx_url_param_names", "falco_md_id_fix_web_enabled", "in_app_support_v2_number_prefixes", "parent_group_view_enabled", "wa_web_console_log_level", "wa_web_pre_chat_device_id_test", "wds_radius_and_casing", "web_abprop_core_wam_runtime", "web_abprop_screen_lock_enabled", "web_design_refresh", "web_disable_logs_low_end_device", "web_enable_profile_pic_thumb_db_caching", "web_image_max_edge", "web_low_end_device_level", "web_material_refresh", "web_native_fetch_media_download", "web_offline_resume_qpl_enabled", "web_socket_parallel_connection_enabled", "web_store_quota_manager_enabled"])
 
 // Props mirrored into localStorage (as a JSON object under `localStorageKey`)
 // so startup code can consult them before the IndexedDB store opens.

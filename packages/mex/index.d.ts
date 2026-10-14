@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1050169898
+// WhatsApp Version: 2.3000.1050302056
 
 export interface WaMexPersistId {
     readonly docId: string
@@ -61,6 +61,7 @@ export declare const WA_MEX_PERSIST_IDS: {
     readonly ClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalog: WaMexPersistId
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalog: WaMexPersistId
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalog: WaMexPersistId
+    readonly CoexCanonicalState: WaMexPersistId
     readonly ConsumerFetchQuickPromotions: WaMexPersistId
     readonly ConsumerQuickPromotionActionGraphQL: WaMexPersistId
     readonly ContactManagerCustomerProfile: WaMexPersistId
@@ -299,6 +300,7 @@ export declare const WA_MEX_OPERATION_SCHEMAS: {
     readonly ClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalog: WaMexOperationSchema<'query', readonly ['id']>
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalog: WaMexOperationSchema<'query', readonly ['id']>
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalog: WaMexOperationSchema<'query', readonly ['id']>
+    readonly CoexCanonicalState: WaMexOperationSchema<'query', readonly ['request']>
     readonly ConsumerFetchQuickPromotions: WaMexOperationSchema<'query', readonly ['nux_ids', 'trigger_context']>
     readonly ConsumerQuickPromotionActionGraphQL: WaMexOperationSchema<'mutation', readonly ['input']>
     readonly ContactManagerCustomerProfile: WaMexOperationSchema<'query', readonly ['lid']>
@@ -731,6 +733,12 @@ export type WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentCont
 
 export type WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalogVariables = {
     readonly id?: string
+}
+
+export type WaMexCoexCanonicalStateVariables = {
+    readonly request?: {
+        readonly phone_number?: number
+    }
 }
 
 export type WaMexConsumerFetchQuickPromotionsVariables = {
@@ -1951,6 +1959,7 @@ export interface WaMexOperationVariables {
     readonly ClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalog: WaMexClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalogVariables
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalog: WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalogVariables
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalog: WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalogVariables
+    readonly CoexCanonicalState: WaMexCoexCanonicalStateVariables
     readonly ConsumerFetchQuickPromotions: WaMexConsumerFetchQuickPromotionsVariables
     readonly ConsumerQuickPromotionActionGraphQL: WaMexConsumerQuickPromotionActionGraphQLVariables
     readonly ContactManagerCustomerProfile: WaMexContactManagerCustomerProfileVariables
@@ -2887,6 +2896,20 @@ export type WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentCont
     readonly node?: {
         readonly __typename?: string
         readonly id?: string
+    }
+}
+
+export type WaMexCoexCanonicalStateResponse = {
+    readonly xfb_whatsapp_coexistence_bsp_info_query?: {
+        readonly product_states?: {
+            readonly states?: ReadonlyArray<{
+                readonly coex_connection_descriptor?: {
+                    readonly product?: unknown
+                    readonly provider_id?: string
+                }
+                readonly onboarding_status?: string
+            }>
+        }
     }
 }
 
@@ -7479,7 +7502,7 @@ export type WaMexuseMAIBAWidgetStateResponse = {
                                 readonly server_formatted_text?: string
                                 readonly show_creative_terms?: boolean
                                 readonly show_select_all?: boolean
-                                readonly signals_action?: 'ENABLE_AAM' | 'ENABLE_AUTOMATIC_EVENTS' | 'ENABLE_CAPIG' | 'OPEN_PIXEL_HELPER'
+                                readonly signals_action?: 'COPY_PIXEL_CODE' | 'ENABLE_AAM' | 'ENABLE_AUTOMATIC_EVENTS' | 'ENABLE_CAPIG' | 'OPEN_PIXEL_HELPER'
                                 readonly single_apply_uses_template?: boolean
                                 readonly sparkline_label?: string
                                 readonly spec_type?: string
@@ -7650,6 +7673,7 @@ export interface WaMexOperationResponses {
     readonly ClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalog: WaMexClientEdgeQuery_AdsBulkEditAdgroupAgenticCheckoutOptInPlugin_Query_selected_ad_account__shops_ads_identity_product_catalogResponse
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalog: WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_combined_campaign_group__product_catalogResponse
     readonly ClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalog: WaMexClientEdgeQuery_AdsBulkEditAgenticCheckoutOptInFieldContentContainer_adgroups_creative__product_set__product_catalogResponse
+    readonly CoexCanonicalState: WaMexCoexCanonicalStateResponse
     readonly ConsumerFetchQuickPromotions: WaMexConsumerFetchQuickPromotionsResponse
     readonly ConsumerQuickPromotionActionGraphQL: WaMexConsumerQuickPromotionActionGraphQLResponse
     readonly ContactManagerCustomerProfile: WaMexContactManagerCustomerProfileResponse

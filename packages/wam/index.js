@@ -1,5 +1,5 @@
 // AUTO-GENERATED — do not edit. Regenerated daily by wa-spec.
-// WhatsApp Version: 2.3000.1050169898
+// WhatsApp Version: 2.3000.1050302056
 'use strict'
 
 const WA_WAM_PROTOCOL_VERSION = 5
@@ -1303,6 +1303,7 @@ const WA_WAM_ENUMS = Object.freeze({
         'INVOKE': 4,
         'INVOKE_META_AI_1ON1': 41,
         'INVOKE_META_AI_GROUP': 42,
+        'MEDIA_VIEWER': 50,
         'META_AI_LONG_PRESS_CONTEXT_MENU': 37,
         'META_AI_SETTINGS': 45,
         'NEW_CHAT': 3,
@@ -2958,6 +2959,7 @@ const WA_WAM_ENUMS = Object.freeze({
         'AI_CHARACTER_START_CHATTING_CLICK': 65,
         'AI_CHARACTER_UNHIDE': 227,
         'AI_CHAT_CLICK': 52,
+        'AI_CHAT_ROW_IMPRESSION': 291,
         'AI_CHAT_THREAD_VOICE_VIEW': 160,
         'AI_CREATION_ADVANCED_SETTINGS_PREVIEWED': 184,
         'AI_CREATION_AUDIENCE_ONLY_ME': 148,
@@ -4604,6 +4606,7 @@ const WA_WAM_ENUMS = Object.freeze({
         export: 'DEVICE_CLASSIFICATION',
         values: Object.freeze({
         'AR_GLASS': 6,
+        'AUTOMOTIVE': 8,
         'DESKTOP': 4,
         'FOLDABLE': 5,
         'MOBILE': 0,
@@ -5536,6 +5539,16 @@ const WA_WAM_ENUMS = Object.freeze({
         'MESSAGE_IMAGE': 4
         })
     }),
+    FMX_BUSINESS_HOLDOUT_GROUP: Object.freeze({
+        module: 'WAWebWamEnumFmxBusinessHoldoutGroup',
+        export: 'FMX_BUSINESS_HOLDOUT_GROUP',
+        values: Object.freeze({
+        'CONTROL': 2,
+        'EXCLUDED': 3,
+        'TEST': 1,
+        'UNKNOWN': 0
+        })
+    }),
     FMX_ENTRY_POINT: Object.freeze({
         module: 'WAWebWamEnumFmxEntryPoint',
         export: 'FMX_ENTRY_POINT',
@@ -6354,15 +6367,19 @@ const WA_WAM_ENUMS = Object.freeze({
         'AI_MEDIA_EDITOR_FILTERS_APPLIED': 142,
         'AI_MEDIA_EDITOR_FILTERS_CLICKED': 140,
         'AI_MEDIA_EDITOR_FILTERS_PREVIEWED': 141,
+        'AI_MEDIA_EDITOR_LONG_PRESSED': 147,
         'AI_MEDIA_EDITOR_PRESETS_APPLIED': 134,
         'AI_MEDIA_EDITOR_PRESETS_CLICKED': 120,
         'AI_MEDIA_EDITOR_PRESETS_PREVIEWED': 123,
         'AI_MEDIA_EDITOR_PRESETS_SEND': 126,
         'AI_MEDIA_EDITOR_REGENERATE': 143,
+        'AI_MEDIA_EDITOR_REPORT_BUTTON_CLICKED': 148,
+        'AI_MEDIA_EDITOR_REPORT_SUBMITTED': 149,
         'AI_MEDIA_EDITOR_RESTYLE_APPLIED': 133,
         'AI_MEDIA_EDITOR_RESTYLE_CLICKED': 119,
         'AI_MEDIA_EDITOR_RESTYLE_PREVIEWED': 122,
         'AI_MEDIA_EDITOR_RESTYLE_SEND': 125,
+        'AI_MEDIA_EDITOR_SAVE_BUTTON_CLICKED': 150,
         'AI_MEDIA_EDITOR_SEND': 144,
         'AI_MEDIA_EDITOR_SEND_CANCEL': 130,
         'AI_MEDIA_EDITOR_UNDO_CLICKED': 146,
@@ -6826,6 +6843,15 @@ const WA_WAM_ENUMS = Object.freeze({
         'PIX_SELECT_BANK_VIEW': 51,
         'PIX_UNDERAGE_ERROR_SHOWN': 76,
         'REJECT_EVENT_SHARING_TOS': 32,
+        'SEND_PAYMENT_ENTER_AMOUNT_DISMISS': 114,
+        'SEND_PAYMENT_ENTER_AMOUNT_VIEW': 113,
+        'SEND_PAYMENT_ENTRY_POINT_CLICK': 110,
+        'SEND_PAYMENT_ENTRY_POINT_IMPRESSION': 109,
+        'SEND_PAYMENT_RECIPIENT_RESOLUTION_STATUS': 112,
+        'SEND_PAYMENT_RECIPIENT_SELECTED': 111,
+        'SEND_PAYMENT_RECIPIENT_UNAVAILABLE_ACTION': 116,
+        'SEND_PAYMENT_RECIPIENT_UNAVAILABLE_SHOWN': 115,
+        'SEND_PAYMENT_RETURNED_WITHOUT_AUTH': 117,
         'START_CHAT_FROM_CTWA': 34,
         'USER_APP_REDIRECT_ACCEPT': 46,
         'USER_APP_REDIRECT_DENY': 47,
@@ -9384,6 +9410,16 @@ const WA_WAM_ENUMS = Object.freeze({
         'PREMIUM': 1
         })
     }),
+    META_AI_READ_ONLY_REASON_TYPE: Object.freeze({
+        module: 'WAWebWamEnumMetaAiReadOnlyReasonType',
+        export: 'META_AI_READ_ONLY_REASON_TYPE',
+        values: Object.freeze({
+        'HATCH_LINKED': 3,
+        'NOT_READ_ONLY': 2,
+        'UNKNOWN': 1,
+        'UPGRADED_TO_HATCH': 4
+        })
+    }),
     META_AI_UPSELL_CTA_OPERATION_TYPE: Object.freeze({
         module: 'WAWebWamEnumMetaAiUpsellCtaOperationType',
         export: 'META_AI_UPSELL_CTA_OPERATION_TYPE',
@@ -9397,6 +9433,9 @@ const WA_WAM_ENUMS = Object.freeze({
         module: 'WAWebWamEnumMetaAiUpsellCtaSourceType',
         export: 'META_AI_UPSELL_CTA_SOURCE_TYPE',
         values: Object.freeze({
+        'MUSE_META_AI_BANNER': 4,
+        'MUSE_META_AI_NULL_STATE': 5,
+        'MUSE_META_AI_PROACTIVE': 6,
         'MUSE_SPARK_PROACTIVE_MESSAGE': 3,
         'PERSISTENT_CHAT_BANNER': 1,
         'PROMOTIONAL_MESSAGE': 2
@@ -11018,6 +11057,9 @@ const WA_WAM_ENUMS = Object.freeze({
         'PAY_UPI_ID_BUTTON': 266,
         'PAY_WITH_UPI_BUTTON': 236,
         'PILL_BUTTON': 385,
+        'PIX_APP_SWITCH_COMPLETE_TRANSACTION_STATUS': 408,
+        'PIX_APP_SWITCH_DEEP_LINK': 407,
+        'PIX_APP_SWITCH_HANDOFF_STATUS': 406,
         'PIX_ICON_ATTACHMENT_TRAY': 381,
         'PIX_INVITE_ASK_TO_SHARE_PIX_KEY': 376,
         'PIX_INVITE_GO_TO_PAYMENTS': 378,
@@ -11036,6 +11078,8 @@ const WA_WAM_ENUMS = Object.freeze({
         'PIX_ROW': 209,
         'PIX_SELECT_BANK_GRID': 396,
         'PIX_SELECT_BANK_LIST': 397,
+        'PIX_SEND_PAYMENT_RECEIVED': 409,
+        'PIX_SEND_RECIPIENT_RESOLUTION': 405,
         'PIX_TYPE': 190,
         'PMT_DETAILS': 44,
         'PRIVACY_AND_TERM_BUTTON': 95,
@@ -11490,7 +11534,6 @@ const WA_WAM_ENUMS = Object.freeze({
         'MSGROM': 37,
         'MSGRP': 31,
         'MSGRSG': 63,
-        'MSGRT': 60,
         'MSGRVR': 52,
         'MSGRW': 32,
         'PORTAL': 18,
@@ -15357,6 +15400,8 @@ const WA_WAM_ENUMS = Object.freeze({
         export: 'THREAD_ACTION_TYPES',
         values: Object.freeze({
         'AI_HOME_IMPRESSION': 15,
+        'ARCHIVE': 29,
+        'CLEAR': 27,
         'CLICK_CHAT_HISTORY': 6,
         'CLICK_CHAT_INFO': 22,
         'CLICK_CONTINUE_CHAT_MODULE': 16,
@@ -15367,10 +15412,12 @@ const WA_WAM_ENUMS = Object.freeze({
         'DELETE': 3,
         'FIRST_PROMPT_SENT': 12,
         'GREETING_RECEIVED': 21,
+        'MUTE': 25,
         'PIN': 1,
         'RENAME': 4,
         'SEARCH_RESULT_CLICK': 13,
         'SEARCH_RESULT_SHOWN': 14,
+        'SHARE': 28,
         'THREAD_CREATE_REQUEST': 19,
         'THREAD_CREATE_RESPONSE': 20,
         'THREAD_ENTER': 8,
@@ -15379,6 +15426,8 @@ const WA_WAM_ENUMS = Object.freeze({
         'THREAD_PHOTO_CHANGED': 18,
         'THREE_DOT_MENU': 11,
         'TOP_NAV': 24,
+        'UNARCHIVE': 30,
+        'UNMUTE': 26,
         'UNPIN': 2
         })
     }),
@@ -16742,7 +16791,9 @@ const WA_WAM_ENUMS = Object.freeze({
         'EMAIL_TYPING_START': 2,
         'ENTRY_POINT_CLICK': 1,
         'GMAIL_CLICK': 3,
-        'MAILTO_CLICK': 4
+        'MAILTO_CLICK': 4,
+        'SERVER_SEND_RESULT': 6,
+        'SERVER_SEND_START': 5
         })
     }),
     WEBC_EMAIL_INVITE_ENTRY_POINT_TYPE: Object.freeze({
@@ -16751,6 +16802,19 @@ const WA_WAM_ENUMS = Object.freeze({
         values: Object.freeze({
         'GROUP_INFO_EMAIL': 1,
         'INTRO_PANEL_EMAIL': 2
+        })
+    }),
+    WEBC_EMAIL_INVITE_SERVER_SEND_RESULT_TYPE: Object.freeze({
+        module: 'WAWebWamEnumWebcEmailInviteServerSendResultType',
+        export: 'WEBC_EMAIL_INVITE_SERVER_SEND_RESULT_TYPE',
+        values: Object.freeze({
+        'INVALID_BATCH': 5,
+        'NOT_AUTHORIZED': 4,
+        'PARTIAL': 2,
+        'SKIPPED': 6,
+        'SUCCESS': 1,
+        'UNAVAILABLE': 3,
+        'UNCERTAIN': 7
         })
     }),
     WEBC_ENV_CODE: Object.freeze({
@@ -17511,6 +17575,7 @@ const WA_WAM_ENUMS = Object.freeze({
         'BB_CREDITS': 28,
         'BIZ_AI_AGENT_THREAD': 46,
         'BIZ_AI_HOME': 47,
+        'BIZ_SUBS_CHURNED_USER_REMINDER_NOTIF': 97,
         'BIZ_SUBS_PAYMENT_ABANDONMENT_NOTIF': 95,
         'BIZ_SUB_VERIFICATION_ELIGIBLE_BUSINESS_ALERT': 94,
         'BIZ_SUB_VERIFICATION_ELIGIBLE_NOTIFICATION': 93,
@@ -17532,6 +17597,7 @@ const WA_WAM_ENUMS = Object.freeze({
         'CHAT_THREAD_IMAGINE': 37,
         'CHAT_THREAD_THINKING': 36,
         'CHAT_THREAD_VIDEO': 38,
+        'CONSUMER_SUBS_CHURNED_USER_REMINDER_NOTIF': 96,
         'CONSUMER_SUBS_PAYMENT_ABANDONMENT_NOTIF': 92,
         'CUSTOMER_LEAD_GEN': 51,
         'CUSTOM_REACTIONS_SETTINGS': 69,
@@ -18241,6 +18307,7 @@ const WA_WAM_EVENTS = Object.freeze({
             isMetaAiAssistant: Object.freeze({ id: 12, type: 'boolean', falcoName: 'is_meta_ai_assistant' }),
             isMetaAiCharacterBotChat: Object.freeze({ id: 9, type: 'boolean', falcoName: 'is_meta_ai_character_bot_chat' }),
             isUserCreatedAgent: Object.freeze({ id: 10, type: 'boolean', falcoName: 'is_user_created_agent' }),
+            metaAiReadOnlyReason: Object.freeze({ id: 58, type: 'enum', enum: 'META_AI_READ_ONLY_REASON_TYPE', falcoName: 'meta_ai_read_only_reason' }),
             metricCount: Object.freeze({ id: 17, type: 'integer', falcoName: 'metric_count' }),
             newBadgeVisible: Object.freeze({ id: 56, type: 'boolean', falcoName: 'new_badge_visible' }),
             promptTriggerPoint: Object.freeze({ id: 50, type: 'enum', enum: 'PROMPT_TRIGGER_POINT', falcoName: 'prompt_trigger_point' }),
@@ -22400,7 +22467,10 @@ const WA_WAM_EVENTS = Object.freeze({
             dedupKey: Object.freeze({ id: 4, type: 'integer', falcoName: 'dedup_key' }),
             webcEmailInviteAction: Object.freeze({ id: 1, type: 'enum', enum: 'WEBC_EMAIL_INVITE_ACTION_TYPE', falcoName: 'webc_email_invite_action' }),
             webcEmailInviteCount: Object.freeze({ id: 2, type: 'integer', falcoName: 'webc_email_invite_count' }),
-            webcEmailInviteEntryPoint: Object.freeze({ id: 3, type: 'enum', enum: 'WEBC_EMAIL_INVITE_ENTRY_POINT_TYPE', falcoName: 'webc_email_invite_entry_point' })
+            webcEmailInviteEntryPoint: Object.freeze({ id: 3, type: 'enum', enum: 'WEBC_EMAIL_INVITE_ENTRY_POINT_TYPE', falcoName: 'webc_email_invite_entry_point' }),
+            webcEmailInviteFailedCount: Object.freeze({ id: 5, type: 'integer', falcoName: 'webc_email_invite_failed_count' }),
+            webcEmailInviteSentCount: Object.freeze({ id: 6, type: 'integer', falcoName: 'webc_email_invite_sent_count' }),
+            webcEmailInviteServerSendResult: Object.freeze({ id: 7, type: 'enum', enum: 'WEBC_EMAIL_INVITE_SERVER_SEND_RESULT_TYPE', falcoName: 'webc_email_invite_server_send_result' })
         })
     }),
     CompanionInviteContact: Object.freeze({
@@ -25284,7 +25354,8 @@ const WA_WAM_EVENTS = Object.freeze({
             mdSessionId: Object.freeze({ id: 1, type: 'string', falcoName: 'md_session_id' }),
             mdTimestampS: Object.freeze({ id: 7, type: 'integer', falcoName: 'md_timestamp_s' }),
             mdWasUpgraded: Object.freeze({ id: 5, type: 'boolean', falcoName: 'md_was_upgraded' }),
-            userLocale: Object.freeze({ id: 15, type: 'string', falcoName: 'user_locale' })
+            userLocale: Object.freeze({ id: 15, type: 'string', falcoName: 'user_locale' }),
+            waWebVisitId: Object.freeze({ id: 19, type: 'integer', falcoName: 'wa_web_visit_id' })
         })
     }),
     MdLinkedDevicesWindowsXdr: Object.freeze({
@@ -26078,8 +26149,10 @@ const WA_WAM_EVENTS = Object.freeze({
         conditions: Object.freeze([]),
         fields: Object.freeze({
             dedupKey: Object.freeze({ id: 3, type: 'integer', falcoName: 'dedup_key' }),
+            metaAiReadOnlyReason: Object.freeze({ id: 5, type: 'enum', enum: 'META_AI_READ_ONLY_REASON_TYPE', falcoName: 'meta_ai_read_only_reason' }),
             metaAiUpsellCtaOperation: Object.freeze({ id: 1, type: 'enum', enum: 'META_AI_UPSELL_CTA_OPERATION_TYPE', falcoName: 'meta_ai_upsell_cta_operation' }),
-            metaAiUpsellCtaSource: Object.freeze({ id: 2, type: 'enum', enum: 'META_AI_UPSELL_CTA_SOURCE_TYPE', falcoName: 'meta_ai_upsell_cta_source' })
+            metaAiUpsellCtaSource: Object.freeze({ id: 2, type: 'enum', enum: 'META_AI_UPSELL_CTA_SOURCE_TYPE', falcoName: 'meta_ai_upsell_cta_source' }),
+            upsellBannerVariant: Object.freeze({ id: 4, type: 'integer', falcoName: 'upsell_banner_variant' })
         })
     }),
     MetaVerifiedInteraction: Object.freeze({
@@ -27366,6 +27439,7 @@ const WA_WAM_EVENTS = Object.freeze({
         fields: Object.freeze({
             commonGroupNum: Object.freeze({ id: 1, type: 'integer', falcoName: 'common_group_num' }),
             countryShown: Object.freeze({ id: 2, type: 'boolean', falcoName: 'country_shown' }),
+            fmxBusinessHoldoutGroup: Object.freeze({ id: 11, type: 'enum', enum: 'FMX_BUSINESS_HOLDOUT_GROUP', falcoName: 'fmx_business_holdout_group' }),
             fmxEntryPoint: Object.freeze({ id: 3, type: 'enum', enum: 'FMX_ENTRY_POINT', falcoName: 'fmx_entry_point' }),
             fmxEvent: Object.freeze({ id: 4, type: 'enum', enum: 'FMX_EVENT', falcoName: 'fmx_event' }),
             highlightGroupType: Object.freeze({ id: 5, type: 'enum', enum: 'HIGHLIGHT_GROUP_TYPE', falcoName: 'highlight_group_type' }),
