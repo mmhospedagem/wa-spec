@@ -3384,6 +3384,8 @@ message EncryptMessageOutput {
     optional string valueSecretRef = 3;
     optional uint64 offlineThreadingId = 4;
     optional uint64 timestampMs = 5;
+    // Legacy field retained for consumers of the 2.3000.1043028647 schema.
+    optional bytes messageKey = 6 [deprecated=true];
     optional string error = 7;
 }
 
@@ -3437,6 +3439,10 @@ message EphemeralSyncResponseBackoffInfo {
 message Epoch0Output {
     optional uint64 epochFbid = 1;
     optional bytes epochAnonId = 2;
+    // Legacy fields retained for consumers of the 2.3000.1043028647 schema.
+    optional bytes epochData = 3 [deprecated=true];
+    optional bytes wrappedRootKeyForSelf = 4 [deprecated=true];
+    optional bytes epochSignature = 5 [deprecated=true];
     optional bytes epochRootKeyFingerprint = 6;
     optional bytes epochRootKey = 7;
 }
